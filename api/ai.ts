@@ -14,8 +14,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       const match = image.dataUrl?.match(/^data:([^;]+);base64,(.+)$/);
       return match ? [{ text: `Imagem de apoio: ${image.name || "anexo"}` }, { inlineData: { mimeType: match[1], data: match[2] } }] : [];
     }) : [];
-    const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=" + encodeURIComponent(process.env.GEMINI_API_KEY), {
-      method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: instruction }, ...imageParts] }], generationConfig: { temperature: 0.2 } })
+    const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent", {
+      method: "POST", headers: { "Content-Type": "application/json", "x-goog-api-key": process.env.GEMINI_API_KEY }, body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: instruction }, ...imageParts] }], generationConfig: { temperature: 0.2 } })
     });
     const payload = await response.json();
     if (!response.ok) { console.error("Gemini API error", response.status, payload?.error?.status || payload?.error?.message || "unknown"); return res.status(502).json({ error: "O Gemini não conseguiu responder agora. Verifique o modelo, a permissão da chave e a cota da API." }); }
