@@ -8,7 +8,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const { question, context, mode, topicTitle, sources, images } = req.body || {};
   if (!question || typeof question !== "string") return res.status(400).json({ error: "Envie uma pergunta válida." });
   const sourceText = typeof context === "string" ? context.slice(0, 120000) : "";
-  const instruction = `Você é uma tutora de estudos para o ENEM. Responda em português do Brasil. O conteúdo atual é: ${topicTitle || "não informado"}. Use exclusivamente os materiais anexados abaixo. Se a resposta não estiver neles, responda exatamente: "${NOT_FOUND}". Não invente arquivo, página, trecho ou fonte. Se os materiais forem insuficientes, diga isso claramente. Modo: ${mode || "pergunta"}.\n\nMATERIAIS:\n${sourceText || "Nenhum material textual foi processado."}\n\nPERGUNTA:\n${question}`;
+  const instruction = `Você é uma tutora de estudos para o ENEM. Responda em português do Brasil. O conteúdo atual é: ${topicTitle || "não informado"}. Use os materiais anexados como prioridade e baseie neles as respostas sempre que trouxerem a informação. Quando não houver materiais ou quando eles não forem suficientes, responda normalmente usando seu conhecimento geral, deixando claro que essa parte não foi encontrada nos anexos. Nunca invente arquivo, página, trecho ou fonte. Se a resposta depender de informação atual ou incerta, avise o estudante. Modo: ${mode || "pergunta"}.\n\nMATERIAIS:\n${sourceText || "Nenhum material textual foi processado."}\n\nPERGUNTA:\n${question}`;
   try {
     const imageParts = Array.isArray(images) ? images.slice(0, 4).flatMap((image: { name?: string; dataUrl?: string }) => {
       const match = image.dataUrl?.match(/^data:([^;]+);base64,(.+)$/);
