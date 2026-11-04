@@ -1,42 +1,39 @@
-# Projeto Aprovação — versão inicial
+# Projeto Aprovação
 
-Aplicação web de estudos para vestibulares, construída com React, TypeScript e Vite.
+Plataforma web de organização de estudos para o ENEM, construída com React, TypeScript e Vite.
 
-## Requisitos
-- Node.js LTS
-- npm (instalado junto com Node.js)
+## Executar localmente
 
-## Como executar
-1. Extraia o arquivo ZIP.
-2. Abra a pasta `projeto-aprovacao` no Visual Studio Code.
-3. Abra Terminal → Novo Terminal.
-4. Execute:
+- Requer Node.js 20 ou superior.
+- `npm install`
+- `npm run dev`
+- `npm run build`
 
-```bash
-npm install
-npm run dev
-```
+## Publicar na Vercel
 
-5. Abra no navegador o endereço local exibido no terminal (normalmente http://localhost:5173).
+O projeto usa Vite. Configure:
 
-## O que já funciona
-- Navegação entre Dashboard, Cronograma, Disciplinas, Exercícios, Redação e Desempenho.
-- Marcar atividades como concluídas.
-- Criar e excluir atividades do cronograma.
-- Adicionar disciplinas.
-- Registrar sessões de exercícios e calcular percentual de acertos.
-- Escrever e salvar redações.
-- Temporizador Pomodoro de 25 minutos.
-- Persistência local no navegador usando localStorage.
+- Framework: Vite
+- Build command: `npm run build`
+- Output directory: `dist`
 
-## Importante
-Esta é a primeira versão funcional de interface (MVP). Os dados ficam salvos no navegador deste computador e navegador. Ainda não há login, sincronização em nuvem, banco Supabase ou integração com IA. Essas serão etapas seguintes.
+A função `api/ai.ts` é uma função serverless da Vercel. Configure a variável privada `GEMINI_API_KEY` no painel da Vercel, em **Settings → Environment Variables**. Nunca coloque a chave real no frontend, no ZIP ou no GitHub.
 
-O gráfico semanal inicial é demonstrativo; não representa horas reais. Os indicadores de atividades e conteúdos usam os dados registrados na aplicação.
+## IA baseada nos materiais
 
-## Próximas etapas
-1. Validar a interface e corrigir ajustes.
-2. Criar projeto Supabase e autenticação.
-3. Migrar os dados locais para PostgreSQL.
-4. Implementar histórico diário e relatórios reais.
-5. Integrar tutor IA por backend seguro.
+Na tela de detalhes de cada conteúdo, o painel **Estudar com IA** permite anexar PDFs e imagens, guardar os materiais no IndexedDB deste navegador, gerar resumo, explicação ou pergunta de revisão e manter o histórico por conteúdo.
+
+Os PDFs têm o texto extraído por página no navegador com `pdfjs-dist`, preservando rótulos de arquivo e página para referência. Imagens ficam disponíveis para análise quando a chave estiver configurada no backend. O endpoint retorna uma mensagem clara quando `GEMINI_API_KEY` não está configurada.
+
+A primeira versão limita arquivos a 10 MB e usa o armazenamento local do navegador. IndexedDB não sincroniza automaticamente entre dispositivos e pode ser limpo pelo usuário. Para produção, recomenda-se migrar arquivos e histórico para armazenamento autenticado no servidor.
+
+## Dados existentes
+
+Disciplinas, conteúdos, cronograma, exercícios, redação, preferências e modo de cor continuam salvos no `localStorage`. Materiais e histórico da IA ficam no IndexedDB, separados por conteúdo.
+
+## Limitações desta primeira entrega
+
+- A resposta real do Gemini depende da configuração de `GEMINI_API_KEY` na Vercel.
+- PDFs escaneados sem camada de texto precisam de OCR ou análise visual no backend; o navegador não inventa texto.
+- Referências de arquivo e página são enviadas com o texto extraído; a precisão depende do conteúdo recuperado.
+- O projeto não promete uso ilimitado: limites de API, tamanho de arquivos e custos dependem da conta Gemini.
