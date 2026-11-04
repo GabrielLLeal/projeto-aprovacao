@@ -41,7 +41,7 @@ function read<T>(key:string, fallback:T):T { try { const x=localStorage.getItem(
 function save(key:string,value:unknown){ try{localStorage.setItem(STORE+key,JSON.stringify(value));}catch{alert("Não foi possível salvar. O armazenamento do navegador pode estar cheio.");} }
 const initialSubjects:Subject[]=Object.keys(curriculum).map((name,i)=>({id:name,name,color:colors[i%colors.length]}));
 const initialTopics:Topic[]=Object.entries(curriculum).flatMap(([subject,items])=>items.map(([level,title,description],i)=>({id:`${subject}-${i+1}`,subject,title,description,level,order:i+1,prerequisites:i?[`${subject}-${i}`]:[]})));
-const initialSettings:SettingsData={student:"Estudante",goal:"Aprovação no vestibular",examDate:"",hours:4,days:["Segunda","Terça","Quarta","Quinta","Sexta","Sábado"],session:30};\nconst initialTasks:Task[]=initialSubjects.map((s,i)=>({id:`seed-${s.id}`,topicId:`${s.name}-1`,date:today(),time:`${String(8+Math.floor(i/2)).padStart(2,"0")}:${i%2?"30":"00"}`,duration:30,status:"pendente"}));
+const initialSettings:SettingsData={student:"Estudante",goal:"Aprovação no vestibular",examDate:"",hours:4,days:["Segunda","Terça","Quarta","Quinta","Sexta","Sábado"],session:30};const initialTasks:Task[]=initialSubjects.map((s,i)=>({id:`seed-${s.id}`,topicId:`${s.name}-1`,date:today(),time:`${String(8+Math.floor(i/2)).padStart(2,"0")}:${i%2?"30":"00"}`,duration:30,status:"pendente"}));
 function App(){
  const [page,setPage]=useState<Page>("Visão geral"),[mobile,setMobile]=useState(false);
  const [subjects,setSubjects]=useState<Subject[]>(()=>read("subjects",initialSubjects));
