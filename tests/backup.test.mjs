@@ -114,7 +114,7 @@ test("falha no localStorage reverte IndexedDB e dados locais", async () => {
   const e = environment({ "pa-v2-essay": "antigo" });
   e.stores.materials.push({ id: "old" });
   e.failNextLocalWrite();
-  await assert.rejects(e.api.restoreBackup(file(backup({ "pa-v2-essay": "novo" }, [{ id: "new" }))), /QuotaExceededError/);
+  await assert.rejects(e.api.restoreBackup(file(backup({ "pa-v2-essay": "novo" }, [{ id: "new" }]))), /QuotaExceededError/);
   assert.equal(e.local.get("pa-v2-essay"), "antigo");
   assert.deepEqual(e.stores.materials.map(x => x.id), ["old"]);
   assert.equal(e.reloads, 0);
