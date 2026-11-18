@@ -98,38 +98,44 @@ export async function restoreBackup(file: File): Promise<boolean> {
   validate(parsed);
   if (!window.confirm("A restauração substituirá os dados deste navegador. Faça um backup antes. Continuar?")) return false;
 
-  // O IndexedDB é restaurado numa transação atômica. Se falhar, recuperamos o localStorage.
+  // Primeiro fazemos uma cópia dos dados atuais para permitir reversão.
   const previousLocal = snapshotLocal();
+  const db = await openDb();
   try {
-    replaceLocal(parsed.local);
-  } catch (error) {
-    try { replaceLocal(previousLocal); } catch {
-      throw new Error("Falha no armazenamento local e na recuperação. Não recarregue a página; exporte os dados que ainda estiverem disponíveis.");
-    }
-    throw error;
-  }
+    const previousDb: Backup["indexedDb"] = {
+      materials: await readStore(db, "materials"),
+      messages: await readStore(db, "messages")
+    };
 
-  let db: IDBDatabase;
-  try {
-    db = await openDb();
-    try {
-      await new Promise<void>((resolve, reject) => {
+    const writeDb = (data: Backup["indexedDb"]): Promise<void> =>
+      new Promise((resolve, reject) => {
         const tx = db.transaction([...STORES], "readwrite");
         tx.oncomplete = () => resolve();
-        tx.onabort = () => reject(tx.error ?? new Error("Restauração interrompida."));
-        tx.onerror = () => reject(tx.error ?? new Error("Erro na restauração."));
+        tx.onabort = () => reject(tx.error ?? new Error("Transação interrompida."));
+        tx.onerror = () => reject(tx.error ?? new Error("Erro na transação."));
         for (const name of STORES) {
           const store = tx.objectStore(name);
           store.clear();
-          for (const record of parsed.indexedDb[name]) store.put(record);
+          for (const record of data[name]) store.put(record);
         }
       });
-    } finally { db.close(); }
-  } catch (error) {
-    try { replaceLocal(previousLocal); } catch {
-      throw new Error("Falha ao recuperar os dados locais após erro no IndexedDB. Não recarregue a página.");
+
+    // O IndexedDB aplica os dois conjuntos de registros numa única transação.
+    await writeDb(parsed.indexedDb);
+    try {
+      replaceLocal(parsed.local);
+    } catch (error) {
+      // Se o armazenamento local falhar, tentamos recuperar ambos os bancos.
+      let rollbackFailed = false;
+      try { replaceLocal(previousLocal); } catch { rollbackFailed = true; }
+      try { await writeDb(previousDb); } catch { rollbackFailed = true; }
+      if (rollbackFailed) {
+        throw new Error("A restauração falhou e a recuperação automática foi incompleta. Não recarregue a página; preserve os arquivos de backup.");
+      }
+      throw error;
     }
-    throw error;
+  } finally {
+    db.close();
   }
   window.location.reload();
   return true;
