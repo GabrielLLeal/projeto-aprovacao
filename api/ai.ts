@@ -58,5 +58,5 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const allowedNames = [...new Set([...referencedFiles, ...imageNames])];
     const citedSources = finalAnswer === NOT_FOUND ? [] : allowedNames.filter(name => finalAnswer.includes(name));
     return res.status(200).json({ answer: finalAnswer, sources: citedSources });
-  } catch { return res.status(502).json({ error: "Não foi possível conectar ao Gemini." }); }
+  } catch (error) { console.error("Erro interno na chamada da IA", error); return res.status(502).json({ error: "Não foi possível conectar ao Gemini." }); }
 }
