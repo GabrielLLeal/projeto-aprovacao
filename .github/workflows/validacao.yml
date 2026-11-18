@@ -31,6 +31,9 @@ jobs:
       - name: Auditar vulnerabilidades das dependencias de producao
         continue-on-error: true
         run: npm audit --omit=dev --audit-level=high
+      - name: Auditar ferramentas de desenvolvimento
+        continue-on-error: true
+        run: npm audit --audit-level=high
       - name: Testar backup e restauracao
         run: node --test tests/*.test.mjs
       - name: Compilar TypeScript e Vite
