@@ -77,7 +77,7 @@ export default function AiStudyPanel({ topicId, topicTitle }: { topicId: string;
     const userMessage: AiMessage = { id: makeId(), topicId, role: "user", text, sources: [], createdAt: new Date().toISOString() };
     await putMessage(userMessage); setMessages(old => [...old, userMessage]); setQuestion("");
     try {
-      const response = await fetch("/api/ai", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ topicTitle, mode, question: text, context, images: materials.filter(item => item.dataUrl).map(item => ({ name: item.name, dataUrl: item.dataUrl })), sources: materials.map(item => item.name) }) });
+      const response = await fetch("/api/ai", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ topicTitle, mode, question: text, context, images: materials.filter(item => item.dataUrl).map(item => ({ name: item.name, dataUrl: item.dataUrl })), sources: [] }) });
       const payload = await response.json();
       const answer = payload.answer || payload.error || "A IA não retornou uma resposta.";
       const assistantMessage: AiMessage = { id: makeId(), topicId, role: "assistant", text: answer, sources: payload.sources || [], createdAt: new Date().toISOString() };
@@ -87,7 +87,7 @@ export default function AiStudyPanel({ topicId, topicTitle }: { topicId: string;
   }
 
   return <section className="ai-panel panel">
-    <div className="panel-heading"><div><h2><Sparkles size={17} /> Estudar com IA</h2><p>A IA consulta primeiro os materiais associados a este conteúdo.</p></div></div>
+    <div className="panel-heading"><div><h2><Sparkles size={17} /> Estudar com IA</h2><p>A IA responde somente com base nos materiais associados a este conteúdo.</p></div></div>
     <div className="ai-materials"><div className="ai-section-title"><strong>Materiais de referência</strong><label className="secondary-button ai-upload"><ImagePlus size={15} /> Adicionar PDF ou imagem<input type="file" accept="application/pdf,image/*" multiple onChange={e => addFiles(e.target.files)} /></label></div>
       {!materials.length && <p className="muted">Envie uma apostila ou foto para começar.</p>}
       {materials.map(material => <div className="ai-material" key={material.id}><FileText size={16}/><div><b>{material.name}</b><small>{Math.ceil(material.size / 1024)} KB · {material.text ? "PDF processado" : "imagem pronta para análise"}</small></div><button className="icon-button" title="Remover material" onClick={() => removeMaterial(material)}><Trash2 size={15}/></button></div>)}
