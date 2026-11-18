@@ -11,6 +11,8 @@ function environment(initial = {}) {
   let confirms = true;
   let reloads = 0;
   let failLocalOnce = false;
+  let exportedBlob = null;
+  let downloads = 0;
   const localStorage = {
     get length() { return local.size; },
     key(i) { return [...local.keys()][i] ?? null; },
@@ -65,14 +67,14 @@ function environment(initial = {}) {
   };
   const document = {
     body: { appendChild() {} },
-    createElement() { return { click() {}, remove() {} }; }
+    createElement() { return { click() { downloads++; }, remove() {} }; }
   };
-  const mockURL = { createObjectURL() { return "blob:mock"; }, revokeObjectURL() {} };
+  const mockURL = { createObjectURL(blob) { exportedBlob = blob; return "blob:mock"; }, revokeObjectURL() {} };
   const exports = {};
   const source = readFileSync(new URL("../src/backup/backup.ts", import.meta.url), "utf8");
   const js = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
   runInNewContext(js, { exports, localStorage, indexedDB, document, URL: mockURL, Blob, Date, setTimeout, window: { confirm: () => confirms, location: { reload: () => reloads++ } } });
-  return { api: exports, local, stores, setConfirm(v) { confirms = v; }, failNextLocalWrite() { failLocalOnce = true; }, get reloads() { return reloads; } };
+  return { api: exports, local, stores, setConfirm(v) { confirms = v; }, failNextLocalWrite() { failLocalOnce = true; }, get reloads() { return reloads; }, get exportedBlob() { return exportedBlob; }, get downloads() { return downloads; } };
 }
 const backup = (local = {}, materials = [], messages = []) => JSON.stringify({
   format: "projeto-aprovacao-backup", version: 1, exportedAt: "2026-11-18T00:00:00Z",
@@ -118,4 +120,21 @@ test("falha no localStorage reverte IndexedDB e dados locais", async () => {
   assert.equal(e.local.get("pa-v2-essay"), "antigo");
   assert.deepEqual(e.stores.materials.map(x => x.id), ["old"]);
   assert.equal(e.reloads, 0);
+});
+
+
+test("exporta dados de estudo e registros da IA em JSON", async () => {
+  const e = environment({ "pa-v2-progress": '{"completed":3}', "unrelated": "private" });
+  e.stores.materials.push({ id: "material-1", topicId: "math", text: "frações" });
+  e.stores.messages.push({ id: "message-1", topicId: "math", text: "explicação" });
+  await e.api.createBackup();
+  assert.equal(e.downloads, 1);
+  assert.ok(e.exportedBlob);
+  const data = JSON.parse(await e.exportedBlob.text());
+  assert.equal(data.format, "projeto-aprovacao-backup");
+  assert.equal(data.version, 1);
+  assert.equal(data.local["pa-v2-progress"], '{"completed":3}');
+  assert.equal(data.local.unrelated, undefined);
+  assert.equal(data.indexedDb.materials[0].id, "material-1");
+  assert.equal(data.indexedDb.messages[0].id, "message-1");
 });
