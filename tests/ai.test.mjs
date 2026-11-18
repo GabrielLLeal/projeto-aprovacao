@@ -57,3 +57,29 @@ test("nao atribui fontes a resposta de ausencia de informacao", async () => {
   const res = await e.execute();
   assert.deepEqual(Array.from(res.data.sources), []);
 });
+
+test("rejeita pergunta excessiva sem chamar Gemini", async () => {
+  const e = setup({ question: "x".repeat(4001), context: "[Fisica.pdf — página 1] Texto" });
+  assert.equal((await e.execute()).statusCode, 413);
+  assert.equal(e.calls, 0);
+});
+
+test("rejeita contexto excessivo sem chamar Gemini", async () => {
+  const e = setup({ question: "Resumo", context: "a".repeat(120001) });
+  assert.equal((await e.execute()).statusCode, 413);
+  assert.equal(e.calls, 0);
+});
+
+test("rejeita mais de quatro imagens", async () => {
+  const e = setup({ question: "Explique", images: Array.from({ length: 5 }, () => ({ name: "foto", dataUrl: "data:image/png;base64,YQ==" })) });
+  assert.equal((await e.execute()).statusCode, 413);
+  assert.equal(e.calls, 0);
+});
+
+test("ignora formato de imagem nao permitido", async () => {
+  const e = setup({ question: "Explique", images: [{ name: "anexo.svg", dataUrl: "data:image/svg+xml;base64,YQ==" }] });
+  const res = await e.execute();
+  assert.equal(res.statusCode, 200);
+  assert.equal(e.calls, 0);
+  assert.deepEqual(Array.from(res.data.sources), []);
+});
