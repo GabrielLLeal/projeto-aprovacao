@@ -52,6 +52,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(502).json({ error: "O Gemini está temporariamente indisponível. Tente novamente em alguns segundos." });
     }
     const answer = payload?.candidates?.[0]?.content?.parts?.map((part: { text?: string }) => part.text || "").join("\n").trim();
-    return res.status(200).json({ answer: answer || NOT_FOUND, sources: [] });
+    const finalAnswer = answer || NOT_FOUND;
+    const referencedFiles = [...sourceText.matchAll(/\\[([^\\]\\n]+) — página \\d+\\]/g)].map(match => match[1]);
+    const imageNames = Array.isArray(images) ? images.slice(0, 4).map((item: { name?: unknown }) => item?.name).filter((name: unknown): name is string => typeof name === "string" && name.length > 0) : [];
+    const allowedNames = [...new Set([...referencedFiles, ...imageNames])];
+    const citedSources = finalAnswer === NOT_FOUND ? [] : allowedNames.filter(name => finalAnswer.includes(name));
+    return res.status(200).json({ answer: finalAnswer, sources: citedSources });
   } catch { return res.status(502).json({ error: "Não foi possível conectar ao Gemini." }); }
 }
