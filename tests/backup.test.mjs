@@ -82,7 +82,7 @@ const file = text => ({ size: text.length, text: async () => text });
 
 test("recusa JSON inválido sem modificar dados", async () => {
   const e = environment({ "pa-v2-essay": "original" });
-  await assert.rejects(e.api.restoreBackup(file("{")), SyntaxError);
+  await assert.rejects(e.api.restoreBackup(file("{")), /JSON|Unexpected|Expected/);
   assert.equal(e.local.get("pa-v2-essay"), "original");
 });
 
