@@ -53,7 +53,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
     const answer = payload?.candidates?.[0]?.content?.parts?.map((part: { text?: string }) => part.text || "").join("\n").trim();
     const finalAnswer = answer || NOT_FOUND;
-    const referencedFiles = [...sourceText.matchAll(/\\[([^\\]\\n]+) — página \\d+\\]/g)].map(match => match[1]);
+    const referencedFiles = [...sourceText.matchAll(/\[([^\]\n]+) — página \d+\]/g)].map(match => match[1]);
     const imageNames = Array.isArray(images) ? images.slice(0, 4).map((item: { name?: unknown }) => item?.name).filter((name: unknown): name is string => typeof name === "string" && name.length > 0) : [];
     const allowedNames = [...new Set([...referencedFiles, ...imageNames])];
     const citedSources = finalAnswer === NOT_FOUND ? [] : allowedNames.filter(name => finalAnswer.includes(name));
