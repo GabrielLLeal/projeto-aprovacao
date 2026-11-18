@@ -1,7 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { readFileSync } from "node:fs";
-import { createRequire } from "node:module";
 import { runInNewContext } from "node:vm";
 import ts from "typescript";
 
@@ -137,4 +136,21 @@ test("exporta dados de estudo e registros da IA em JSON", async () => {
   assert.equal(data.local.unrelated, undefined);
   assert.equal(data.indexedDb.materials[0].id, "material-1");
   assert.equal(data.indexedDb.messages[0].id, "message-1");
+});
+
+
+test("backup exportado pode ser importado em outro ambiente preservando dados", async () => {
+  const original = environment({ "pa-v2-subjects": '[{"id":"mat"}]', "pa-v2-settings": '{"dark":true}' });
+  original.stores.materials.push({ id: "pdf-1", topicId: "mat", name: "Apostila", text: "Conteúdo" });
+  original.stores.messages.push({ id: "msg-1", topicId: "mat", role: "assistant", text: "Resposta", sources: [] });
+  await original.api.createBackup();
+  const json = await original.exportedBlob.text();
+  const destino = environment({ "pa-v2-subjects": "dados antigos" });
+  destino.stores.materials.push({ id: "material-antigo" });
+  assert.equal(await destino.api.restoreBackup(file(json)), true);
+  assert.equal(destino.local.get("pa-v2-subjects"), '[{"id":"mat"}]');
+  assert.equal(destino.local.get("pa-v2-settings"), '{"dark":true}');
+  assert.deepEqual(destino.stores.materials.map(x => x.id), ["pdf-1"]);
+  assert.deepEqual(destino.stores.messages.map(x => x.id), ["msg-1"]);
+  assert.equal(destino.reloads, 1);
 });
