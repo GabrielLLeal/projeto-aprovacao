@@ -28,5 +28,7 @@ jobs:
           cache: npm
       - name: Instalar dependencias
         run: npm ci
+      - name: Testar backup e restauracao
+        run: node --test tests/*.test.mjs
       - name: Compilar TypeScript e Vite
         run: npm run build
