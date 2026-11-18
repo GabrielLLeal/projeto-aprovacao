@@ -14,7 +14,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       const match = image.dataUrl?.match(/^data:([^;]+);base64,(.+)$/);
       return match ? [{ text: `Imagem de apoio: ${image.name || "anexo"}` }, { inlineData: { mimeType: match[1], data: match[2] } }] : [];
     }) : [];
-    if (!sourceText.trim() && imageParts.length === 0) return res.status(200).json({ answer: NOT_FOUND, sources: [] });\n    const models = ["gemini-3.8-flash", "gemini-3.5-flash-lite"];
+    if (!sourceText.trim() && imageParts.length === 0) return res.status(200).json({ answer: NOT_FOUND, sources: [] });
+    const models = ["gemini-3.8-flash", "gemini-3.5-flash-lite"];
     let response: Response | undefined;
     let payload: any = undefined;
     let lastStatus = 0;
