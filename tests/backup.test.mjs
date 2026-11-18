@@ -67,11 +67,11 @@ function environment(initial = {}) {
     body: { appendChild() {} },
     createElement() { return { click() {}, remove() {} }; }
   };
-  const URL = { createObjectURL() { return "blob:mock"; }, revokeObjectURL() {} };
+  const mockURL = { createObjectURL() { return "blob:mock"; }, revokeObjectURL() {} };
   const exports = {};
   const source = readFileSync(new URL("../src/backup/backup.ts", import.meta.url), "utf8");
   const js = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
-  runInNewContext(js, { exports, localStorage, indexedDB, document, URL, Blob, Date, setTimeout, window: { confirm: () => confirms, location: { reload: () => reloads++ } } });
+  runInNewContext(js, { exports, localStorage, indexedDB, document, URL: mockURL, Blob, Date, setTimeout, window: { confirm: () => confirms, location: { reload: () => reloads++ } } });
   return { api: exports, local, stores, setConfirm(v) { confirms = v; }, failNextLocalWrite() { failLocalOnce = true; }, get reloads() { return reloads; } };
 }
 const backup = (local = {}, materials = [], messages = []) => JSON.stringify({
