@@ -1,7 +1,9 @@
+/// <reference types="vite/client" />
 import React, { useEffect, useMemo, useState } from "react";
 import { FileText, ImagePlus, LoaderCircle, MessageCircle, Send, Sparkles, Trash2 } from "lucide-react";
 import { deleteMaterial, listMaterials, listMessages, putMaterial, putMessage } from "./storage";
 import type { AiMaterial, AiMessage } from "./storage";
+import pdfWorkerUrl from "pdfjs-dist/legacy/build/pdf.worker.min.mjs?url";
 import "./ai.css";
 
 function makeId() { return `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`; }
@@ -18,6 +20,7 @@ async function readImage(file: File): Promise<string> {
 async function extractPdfText(file: File): Promise<string> {
   try {
     const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
+    pdfjs.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
     const bytes = new Uint8Array(await file.arrayBuffer());
     const pdf = await pdfjs.getDocument({ data: bytes }).promise;
     const pages: string[] = [];
@@ -25,7 +28,7 @@ async function extractPdfText(file: File): Promise<string> {
       const page = await pdf.getPage(pageNumber);
       const content = await page.getTextContent();
       const text = content.items.map((item: any) => item.str || "").join(" ").trim();
-      pages.push(`[${file.name} — página ${pageNumber}]\n${text}`);
+      if (text) pages.push(`[${file.name} — página ${pageNumber}]\n${text}`);
     }
     return pages.join("\n\n");
   } catch {
@@ -90,7 +93,7 @@ export default function AiStudyPanel({ topicId, topicTitle }: { topicId: string;
     <div className="panel-heading"><div><h2><Sparkles size={17} /> Estudar com IA</h2><p>A IA responde somente com base nos materiais associados a este conteúdo.</p></div></div>
     <div className="ai-materials"><div className="ai-section-title"><strong>Materiais de referência</strong><label className="secondary-button ai-upload"><ImagePlus size={15} /> Adicionar PDF ou imagem<input type="file" accept="application/pdf,image/*" multiple onChange={e => addFiles(e.target.files)} /></label></div>
       {!materials.length && <p className="muted">Envie uma apostila ou foto para começar.</p>}
-      {materials.map(material => <div className="ai-material" key={material.id}><FileText size={16}/><div><b>{material.name}</b><small>{Math.ceil(material.size / 1024)} KB · {material.text ? "PDF processado" : "imagem pronta para análise"}</small></div><button className="icon-button" title="Remover material" onClick={() => removeMaterial(material)}><Trash2 size={15}/></button></div>)}
+      {materials.map(material => <div className="ai-material" key={material.id}><FileText size={16}/><div><b>{material.name}</b><small>{Math.ceil(material.size / 1024)} KB · {material.text ? "PDF processado" : material.dataUrl ? "imagem pronta para análise" : "PDF sem texto extraído. Tente anexar novamente ou envie imagens das páginas."}</small></div><button className="icon-button" title="Remover material" onClick={() => removeMaterial(material)}><Trash2 size={15}/></button></div>)}
     </div>
     <div className="ai-actions"><button className="secondary-button" onClick={() => ask("Faça um resumo organizado deste conteúdo.", "resumo")} disabled={busy}>Gerar resumo</button><button className="secondary-button" onClick={() => ask("Explique este conteúdo de forma simples para o ENEM.", "explicação")} disabled={busy}>Explicar de forma simples</button><button className="secondary-button" onClick={() => ask("Crie uma pergunta de revisão baseada nos materiais.", "revisão")} disabled={busy}>Pergunta de revisão</button></div>
     <div className="ai-chat">{messages.map(message => <div className={`ai-message ${message.role}`} key={message.id}><span>{message.role === "user" ? "Você" : "IA"}</span><p>{message.text}</p>{message.sources.length > 0 && <small>Fontes: {message.sources.join(", ")}</small>}</div>)}{busy && <div className="ai-message assistant"><LoaderCircle className="spin" size={15}/> Processando com os materiais deste conteúdo...</div>}</div>
