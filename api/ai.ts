@@ -6,6 +6,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Método não permitido." });
   if (!process.env.GEMINI_API_KEY) return res.status(503).json({ error: "A IA ainda não está configurada. Adicione GEMINI_API_KEY nas variáveis privadas da Vercel." });
   const { question, context, mode, topicTitle, images } = req.body || {};
+  if (images !== undefined && !Array.isArray(images)) return res.status(400).json({ error: "O campo de imagens deve ser uma lista." });
+  if (Array.isArray(images) && images.some(image => !image || typeof image !== "object" || typeof image.dataUrl !== "string" || !/^data:image\/(?:png|jpeg|webp);base64,[A-Za-z0-9+/=]+$/.test(image.dataUrl))) return res.status(400).json({ error: "Imagem inválida. Envie apenas PNG, JPEG ou WebP." });
   if (!question || typeof question !== "string") return res.status(400).json({ error: "Envie uma pergunta válida." });
   const sourceText = typeof context === "string" ? context.slice(0, 120000) : "";
   if (typeof context === "string" && context.length > 120000) return res.status(413).json({ error: "Material textual excede o limite de 120 mil caracteres." });
@@ -19,7 +21,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return [{ text: `Imagem de apoio: ${String(image.name || "anexo").slice(0, 150)}` }, { inlineData: { mimeType: match[1], data: match[2] } }];
     }) : [];
     if (!sourceText.trim() && imageParts.length === 0) return res.status(200).json({ answer: NOT_FOUND, sources: [] });
-    const models = ["gemini-3.8-flash", "gemini-3.5-flash-lite"];
+    const models = [process.env.GEMINI_MODEL || "gemini-2.5-flash"];
     let response: Response | undefined;
     let payload: any = undefined;
     let lastStatus = 0;
