@@ -76,10 +76,15 @@ test("rejeita mais de quatro imagens", async () => {
   assert.equal(e.calls, 0);
 });
 
-test("ignora formato de imagem nao permitido", async () => {
+test("rejeita formato de imagem nao permitido", async () => {
   const e = setup({ question: "Explique", images: [{ name: "anexo.svg", dataUrl: "data:image/svg+xml;base64,YQ==" }] });
   const res = await e.execute();
-  assert.equal(res.statusCode, 200);
+  assert.equal(res.statusCode, 400);
   assert.equal(e.calls, 0);
-  assert.deepEqual(Array.from(res.data.sources), []);
+});
+
+test("rejeita campo images que nao seja lista", async () => {
+  const e = setup({ question: "Explique", images: "arquivo" });
+  assert.equal((await e.execute()).statusCode, 400);
+  assert.equal(e.calls, 0);
 });
