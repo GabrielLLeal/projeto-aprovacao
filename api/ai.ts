@@ -4,6 +4,9 @@ const NOT_FOUND = "Não encontrei essa informação nos materiais anexados.";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Método não permitido." });
+  if (process.env.VERCEL_ENV === "production") {
+    return res.status(503).json({ error: "O tutor com IA está disponível apenas na prévia. Você pode continuar usando o cronograma e o backup nesta versão." });
+  }
   if (!process.env.GEMINI_API_KEY) return res.status(503).json({ error: "A IA ainda não está configurada. Adicione GEMINI_API_KEY nas variáveis privadas da Vercel." });
   const { question, context, mode, topicTitle, images } = req.body || {};
   if (images !== undefined && !Array.isArray(images)) return res.status(400).json({ error: "O campo de imagens deve ser uma lista." });
