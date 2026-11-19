@@ -10,15 +10,20 @@ function setup(body, options = {}) {
   const js = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
   let calls = 0;
   let lastRequest;
-  const fetch = async (_url, init) => {
+  const models = [];
+  const fetch = async (url, init) => {
+    models.push(new URL(url).pathname.split('/').pop().split(':')[0]);
     calls++;
     lastRequest = init;
+    if (options.unavailableOnce && calls === 1) {
+      return { ok: false, status: 503, json: async () => ({ error: { status: 'UNAVAILABLE' } }) };
+    }
     return { ok: true, status: 200, json: async () => ({ candidates: [{ content: { parts: [{ text: options.answer ?? "Não encontrei essa informação nos materiais anexados." }] } }] }) };
   };
   runInNewContext(js, { exports, process: { env: { GEMINI_API_KEY: options.key === false ? "" : "test-only" } }, fetch, AbortController, setTimeout, clearTimeout, console });
   const req = { method: options.method ?? "POST", body };
   const res = { statusCode: 200, status(n) { this.statusCode = n; return this; }, json(data) { this.data = data; return this; } };
-  return { execute: async () => { await exports.default(req, res); return res; }, get calls() { return calls; }, get lastRequest() { return lastRequest; } };
+  return { execute: async () => { await exports.default(req, res); return res; }, get calls() { return calls; }, get lastRequest() { return lastRequest; }, models };
 }
 
 test("recusa requisicao sem pergunta", async () => {
@@ -87,4 +92,15 @@ test("rejeita campo images que nao seja lista", async () => {
   const e = setup({ question: "Explique", images: "arquivo" });
   assert.equal((await e.execute()).statusCode, 400);
   assert.equal(e.calls, 0);
+});
+
+test("usa o modelo de reserva quando o modelo principal retorna 503", async () => {
+  const e = setup({ question: "Qual é o resultado?", context: "[Apostila.pdf — página 2] Resultado: 19." }, {
+    unavailableOnce: true,
+    answer: "19 (Apostila.pdf, página 2).",
+  });
+  const res = await e.execute();
+  assert.equal(res.statusCode, 200);
+  assert.deepEqual(e.models, ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite"]);
+  assert.deepEqual(Array.from(res.data.sources), ["Apostila.pdf"]);
 });
