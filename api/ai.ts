@@ -21,37 +21,34 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return [{ text: `Imagem de apoio: ${String(image.name || "anexo").slice(0, 150)}` }, { inlineData: { mimeType: match[1], data: match[2] } }];
     }) : [];
     if (!sourceText.trim() && imageParts.length === 0) return res.status(200).json({ answer: NOT_FOUND, sources: [] });
-    const models = [process.env.GEMINI_MODEL || "gemini-3.5-flash-lite"];
+    const configuredModel = process.env.GEMINI_MODEL;
+    const models = configuredModel
+      ? [configuredModel, configuredModel]
+      : ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite"];
     let response: Response | undefined;
     let payload: any = undefined;
     let lastStatus = 0;
 
     for (const model of models) {
-      for (let attempt = 0; attempt < 2; attempt += 1) {
-        const controller = new AbortController();
-        const timeout = setTimeout(() => controller.abort(), 15000);
-        try {
-          response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json", "x-goog-api-key": process.env.GEMINI_API_KEY },
-            body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: instruction }, ...imageParts] }], generationConfig: { temperature: 0.2 } }),
-            signal: controller.signal,
-          });
-          payload = await response.json();
-          lastStatus = response.status;
-          if (response.ok) break;
-          if (response.status !== 503) break;
-          await new Promise((resolve) => setTimeout(resolve, 1200));
-        } catch (error) {
-          if ((error as { name?: string }).name !== "AbortError") throw error;
-          lastStatus = 504;
-        } finally {
-          clearTimeout(timeout);
-        }
-        if (response?.ok || (lastStatus !== 503 && lastStatus !== 504)) break;
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 15000);
+      try {
+        response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "x-goog-api-key": process.env.GEMINI_API_KEY },
+          body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: instruction }, ...imageParts] }], generationConfig: { temperature: 0.2 } }),
+          signal: controller.signal,
+        });
+        payload = await response.json();
+        lastStatus = response.status;
+      } catch (error) {
+        if ((error as { name?: string }).name !== "AbortError") throw error;
+        response = undefined;
+        lastStatus = 504;
+      } finally {
+        clearTimeout(timeout);
       }
-      if (response?.ok) break;
-      response = undefined;
+      if (response?.ok || (lastStatus !== 503 && lastStatus !== 504)) break;
     }
 
     if (!response?.ok) {
