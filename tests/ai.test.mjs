@@ -20,7 +20,7 @@ function setup(body, options = {}) {
     }
     return { ok: true, status: 200, json: async () => ({ candidates: [{ content: { parts: [{ text: options.answer ?? "Não encontrei essa informação nos materiais anexados." }] } }] }) };
   };
-  runInNewContext(js, { exports, process: { env: { GEMINI_API_KEY: options.key === false ? "" : "test-only" } }, fetch, AbortController, setTimeout, clearTimeout, console });
+  runInNewContext(js, { exports, process: { env: { GEMINI_API_KEY: options.key === false ? "" : "test-only", VERCEL_ENV: options.environment } }, fetch, AbortController, setTimeout, clearTimeout, console });
   const req = { method: options.method ?? "POST", body };
   const res = { statusCode: 200, status(n) { this.statusCode = n; return this; }, json(data) { this.data = data; return this; } };
   return { execute: async () => { await exports.default(req, res); return res; }, get calls() { return calls; }, get lastRequest() { return lastRequest; }, models };
@@ -103,4 +103,12 @@ test("usa o modelo de reserva quando o modelo principal retorna 503", async () =
   assert.equal(res.statusCode, 200);
   assert.deepEqual(e.models, ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite"]);
   assert.deepEqual(Array.from(res.data.sources), ["Apostila.pdf"]);
+});
+
+test("versão oficial não chama Gemini mesmo com chave configurada", async () => {
+  const e = setup({ question: "Qual é o resultado?", context: "[Apostila.pdf — página 2] Resultado: 19." }, { environment: "production" });
+  const res = await e.execute();
+  assert.equal(res.statusCode, 503);
+  assert.match(res.data.error, /apenas na prévia/);
+  assert.equal(e.calls, 0);
 });
