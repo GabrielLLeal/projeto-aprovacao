@@ -69,6 +69,7 @@ function App(){
  const [exerciseId,setExerciseId]=useState<string|null>(null);
  const [query,setQuery]=useState(""); const [filterSubject,setFilterSubject]=useState("Todas"); const [filterStatus,setFilterStatus]=useState("Todos"); const [filterTopic,setFilterTopic]=useState("Todos");
  const [modal,setModal]=useState<"task"|"subject"|"topic"|"exercise"|null>(null);
+ const [practiceTopic,setPracticeTopic]=useState<Topic|null>(null);
  const [toast,setToast]=useState("");
  const [taskForm,setTaskForm]=useState({date:today(),time:"08:30",duration:50,topicId:""});
  const [subjectName,setSubjectName]=useState("");
@@ -81,7 +82,12 @@ function App(){
  const isUnlocked=(t:Topic)=>topics.filter(x=>x.subject===t.subject&&x.order<t.order).every(x=>topicStatus(x)==="concluído");
  const topicTasks=topics.map(t=>({topic:t,task:tasks.find(x=>x.topicId===t.id)}));
  const makeTask=(topicId:string,date=today())=>{const topic=topics.find(t=>t.id===topicId);if(!topic)return;setTasks(old=>old.some(x=>x.topicId===topicId)?old.map(x=>x.topicId===topicId?{...x,date,status:x.status==="concluído"?"concluído":"pendente"}:x):[...old,{id:id(),topicId,date,time:"08:30",duration:settings.session,status:"pendente"}]);};
- const complete=(topicId:string)=>{if(!isUnlocked(topics.find(t=>t.id===topicId)!)){notify("Conclua os pré-requisitos antes de liberar este conteúdo.");return;}setTasks(old=>old.some(x=>x.topicId===topicId)?old.map(x=>x.topicId===topicId?{...x,status:"concluído"}:x):[...old,{id:id(),topicId,date:today(),time:"08:30",duration:settings.session,status:"concluído"}]);notify("Conteúdo concluído! Próximo conteúdo liberado.");};
+ const complete=(topicId:string)=>{const topic=topics.find(t=>t.id===topicId);if(!topic)return;if(!isUnlocked(topic)){notify("Conclua os pré-requisitos antes de liberar este conteúdo.");return;}setTasks(old=>old.some(x=>x.topicId===topicId)?old.map(x=>x.topicId===topicId?{...x,status:"concluído"}:x):[...old,{id:id(),topicId,date:today(),time:"08:30",duration:settings.session,status:"concluído"}]);if (practiceLists(topic).length || exercises.some(e => e.subject===topic.subject && e.topic===topic.title)) {
+   setPracticeTopic(topic);
+ } else {
+   notify("Conteúdo concluído! Próximo conteúdo liberado.");
+ }
+ };
  const start=(topicId:string)=>{if(!isUnlocked(topics.find(t=>t.id===topicId)!)){notify("Este conteúdo está aguardando os pré-requisitos.");return;}setTasks(old=>old.some(x=>x.topicId===topicId)?old.map(x=>x.topicId===topicId?{...x,status:"em andamento"}:x):[...old,{id:id(),topicId,date:today(),time:"08:30",duration:settings.session,status:"em andamento"}]);setSelectedTopic(topicId);notify("Estudo iniciado.");};
  const reprogram=(topicId:string)=>{makeTask(topicId,today());notify("Atividade reprogramada para hoje.");};
  const skip=(topicId:string)=>{const t=topics.find(x=>x.id===topicId);if(!t||!confirm(`Pular temporariamente "${t.title}"? Ele continuará disponível na área de revisão e não será considerado concluído.`))return;setTasks(old=>old.some(x=>x.topicId===topicId)?old.map(x=>x.topicId===topicId?{...x,status:"pulado"}:x):[...old,{id:id(),topicId,date:today(),time:"08:30",duration:settings.session,status:"pulado"}]);notify("Conteúdo registrado como pulado e enviado para revisão.");};
@@ -123,6 +129,26 @@ function App(){
  {modal==="exercise"&&<form onSubmit={addExercise}><label>Matéria<select value={exerciseForm.subject} onChange={e=>setExerciseForm({...exerciseForm,subject:e.target.value,topic:""})}>{subjects.map(s=><option>{s.name}</option>)}</select></label><label>Tema<select required value={exerciseForm.topic} onChange={e=>setExerciseForm({...exerciseForm,topic:e.target.value})}><option value="">Selecione um tema</option>{topics.filter(t=>t.subject===exerciseForm.subject).map(t=><option>{t.title}</option>)}</select></label><button type="button" className="text-button" onClick={()=>{const title=prompt("Nome do novo tema:");if(!title?.trim())return;const list=topics.filter(t=>t.subject===exerciseForm.subject);const nt:Topic={id:id(),subject:exerciseForm.subject,title:title.trim(),description:"Tema criado pela biblioteca de exercícios.",level:"Básico",order:list.length+1,prerequisites:list.length?[list[list.length-1].id]:[]};setTopics(old=>[...old,nt]);setExerciseForm(old=>({...old,topic:nt.title}));notify("Novo tema criado e selecionado.");}}>+ Criar novo tema</button><label>Título<input required value={exerciseForm.title} onChange={e=>setExerciseForm({...exerciseForm,title:e.target.value})}/></label><label>Enunciado<textarea required value={exerciseForm.statement} onChange={e=>setExerciseForm({...exerciseForm,statement:e.target.value})}/></label><label>Anexar imagens (até 1,5 MB cada)<input type="file" accept="image/*" multiple onChange={e=>attachFiles(e.target.files)}/></label><div className="attachment-grid">{exerciseForm.attachments.map((a,i)=><img src={a} key={i} alt={`Anexo ${i+1}`}/>)}</div><label>Status<select value={exerciseForm.status} onChange={e=>setExerciseForm({...exerciseForm,status:e.target.value as Exercise["status"]})}>{["não resolvido","resolvido","acertou","errou"].map(x=><option>{x}</option>)}</select></label><label className="check-label"><input type="checkbox" checked={exerciseForm.review} onChange={e=>setExerciseForm({...exerciseForm,review:e.target.checked})}/> Para revisar</label><label>Gabarito<textarea value={exerciseForm.answerKey} onChange={e=>setExerciseForm({...exerciseForm,answerKey:e.target.value})}/></label><label>Resolução<textarea value={exerciseForm.solution} onChange={e=>setExerciseForm({...exerciseForm,solution:e.target.value})}/></label><label>Data<input type="date" value={exerciseForm.date} onChange={e=>setExerciseForm({...exerciseForm,date:e.target.value})}/></label><button className="primary-button full"><Save size={15}/> Salvar exercício</button></form>}
  {modal==="task"&&<form onSubmit={e=>{e.preventDefault();if(!taskForm.topicId)return;const t=topics.find(x=>x.id===taskForm.topicId)!;if(!isUnlocked(t)){notify("Pré-requisitos ainda pendentes.");return;}setTasks(old=>old.some(x=>x.topicId===t.id)?old.map(x=>x.topicId===t.id?{...x,date:taskForm.date,time:taskForm.time,duration:taskForm.duration}:x):[...old,{id:id(),topicId:t.id,date:taskForm.date,time:taskForm.time,duration:taskForm.duration,status:"pendente"}]);setModal(null);notify("Atividade agendada.");}}><label>Conteúdo<select value={taskForm.topicId} onChange={e=>setTaskForm({...taskForm,topicId:e.target.value})}><option value="">Selecione conteúdo liberado</option>{topics.filter(t=>isUnlocked(t)&&topicStatus(t)!=="concluído").map(t=><option value={t.id}>{t.subject} — {t.title}</option>)}</select></label><label>Data<input type="date" value={taskForm.date} onChange={e=>setTaskForm({...taskForm,date:e.target.value})}/></label><label>Horário<input type="time" value={taskForm.time} onChange={e=>setTaskForm({...taskForm,time:e.target.value})}/></label><label>Duração estimada (min)<input type="number" min="10" max="300" value={taskForm.duration} onChange={e=>setTaskForm({...taskForm,duration:Number(e.target.value)})}/></label><button className="primary-button full"><CalendarClock size={15}/> Salvar no cronograma</button></form>}
  </div></div>}
+ {practiceTopic&&<dialog className="modal" aria-labelledby="practice-heading"
+   ref={node => { if (node && !node.open) node.showModal(); }}
+   onClose={() => setPracticeTopic(null)}>
+   <div className="modal-head">
+     <h2 id="practice-heading">Pratique agora</h2>
+     <button className="icon-button" aria-label="Fechar exercícios" onClick={() => setPracticeTopic(null)}><X /></button>
+   </div>
+   <p>{practiceTopic.title}</p>
+   <ul>{practiceLists(practiceTopic).map(({title,url}) =>
+     <li key={url}><a href={url} target="_blank" rel="noopener noreferrer">{title} · Olhar Químico</a></li>
+   )}</ul>
+   {exercises.filter(e => e.subject===practiceTopic.subject && e.topic===practiceTopic.title).map(e =>
+     <button key={e.id} className="secondary-button" onClick={() => {
+       setPracticeTopic(null);
+       setExerciseId(e.id);
+       setPage("Banco de exercícios");
+     }}>{e.title}</button>
+   )}
+   <button className="secondary-button" onClick={() => setPracticeTopic(null)}>Continuar depois</button>
+ </dialog>}
  {toast&&<div className="toast"><CircleCheck size={17}/>{toast}</div>}
  </div>;
 }
@@ -136,17 +162,30 @@ function ExerciseAnswerFields({exercise,onUpdate}:{exercise:Exercise;onUpdate:(p
 function TopicRow({topic,status,unlocked,onStart,onDone,onReprogram,onSkip,onMaster}:{topic:Topic;status:Status;unlocked:boolean;onStart:()=>void;onDone:()=>void;onReprogram:()=>void;onSkip?:()=>void;onMaster?:()=>void}){return <div className="topic-row"><div className="topic-bullet">{topic.order}</div><div className="topic-row-main"><b>{topic.title}</b><span>{topic.subject} · {topic.level} · {topic.description}</span></div><StatusPill status={status} unlocked={unlocked}/><div className="row-actions"><button className="small-button" disabled={!unlocked} onClick={onStart}><Play size={13}/> Iniciar</button><button className="small-button" disabled={!unlocked} onClick={onDone}><Check size={13}/> Concluir</button>{status!=="concluído"&&<button className="small-button" onClick={onReprogram}><CalendarClock size={13}/> Hoje</button>}{onMaster&&status!=="concluído"&&unlocked&&<button className="small-button known-button" onClick={onMaster}><Check size={13}/> Já sei</button>}{onSkip&&status!=="concluído"&&<button className="small-button" onClick={onSkip}><SkipForward size={13}/> Pular</button>}</div></div>}
 function EssayPad(){const [text,setText]=useState(()=>read("essay",""));const [title,setTitle]=useState(()=>read("essay-title","Minha redação"));return <><Heading title="Redação" sub="Escreva, salve e acompanhe seus textos neste navegador."/><div className="panel"><label>Título<input value={title} onChange={e=>setTitle(e.target.value)}/></label><label>Texto<textarea className="essay-area" value={text} onChange={e=>setText(e.target.value)} placeholder="Comece sua redação aqui..."/></label><button className="primary-button" onClick={()=>{save("essay",text);save("essay-title",title);alert("Redação salva.");}}><Save size={15}/> Salvar redação</button></div></>}
 const generalChemistryExercises = [
-  { title: "Tabela periódica", url: "https://olharquimico.com/exercicios-tabela-periodica-gabarito/" },
-  { title: "Íons, cátions e ânions", url: "https://olharquimico.com/exercicios-ions-cations-anions-gabarito/" },
-  { title: "Modelos atômicos", url: "https://olharquimico.com/exercicios-modelos-atomicos-gabarito/" },
-  { title: "Substâncias simples e compostas", url: "https://olharquimico.com/exercicios-substancias-simples-e-compostas/" },
-  { title: "Estados físicos e mudanças de estado", url: "https://olharquimico.com/estados-fisicos-mudancas-exercicios-gabarito/" },
-  { title: "Estrutura atômica", url: "https://olharquimico.com/exercicios-estrutura-atomica-gabarito/" },
-  { title: "Propriedades específicas da matéria", url: "https://olharquimico.com/propriedades-especificas-da-materia-exercicios/" },
-  { title: "Propriedades gerais da matéria", url: "https://olharquimico.com/exercicios-propriedades-gerais-materia-gabrito/" },
-  { title: "Fenômenos físicos e químicos", url: "https://olharquimico.com/exercicios-sobre-fenomenos-fisicos-quimicos-resolvidos/" },
-  { title: "Ligações iônicas", url: "https://olharquimico.com/exercicios-ligacoes-ionicas-gabarito-resolucao/" },
+  { topicId: "Química-4", title: "Tabela periódica", url: "https://olharquimico.com/exercicios-tabela-periodica-gabarito/" },
+  { topicId: "Química-3", title: "Íons, cátions e ânions", url: "https://olharquimico.com/exercicios-ions-cations-anions-gabarito/" },
+  { topicId: "Química-3", title: "Modelos atômicos", url: "https://olharquimico.com/exercicios-modelos-atomicos-gabarito/" },
+  { topicId: "Química-1", title: "Substâncias simples e compostas", url: "https://olharquimico.com/exercicios-substancias-simples-e-compostas/" },
+  { topicId: "Química-1", title: "Estados físicos e mudanças de estado", url: "https://olharquimico.com/estados-fisicos-mudancas-exercicios-gabarito/" },
+  { topicId: "Química-3", title: "Estrutura atômica", url: "https://olharquimico.com/exercicios-estrutura-atomica-gabarito/" },
+  { topicId: "Química-1", title: "Propriedades específicas da matéria", url: "https://olharquimico.com/propriedades-especificas-da-materia-exercicios/" },
+  { topicId: "Química-1", title: "Propriedades gerais da matéria", url: "https://olharquimico.com/exercicios-propriedades-gerais-materia-gabrito/" },
+  { topicId: "Química-1", title: "Fenômenos físicos e químicos", url: "https://olharquimico.com/exercicios-sobre-fenomenos-fisicos-quimicos-resolvidos/" },
+  { topicId: "Química-5", title: "Ligações iônicas", url: "https://olharquimico.com/exercicios-ligacoes-ionicas-gabarito-resolucao/" },
+  { topicId: "Química-2", title: "Misturas homogêneas e heterogêneas", url: "https://olharquimico.com/exercicios-misturas-homogeneas-heterogeneas-gabarito/" },
+  { topicId: "Química-4", title: "Propriedades periódicas", url: "https://olharquimico.com/exercicios-propriedades-periodicas-gabarito/" },
+  { topicId: "Química-3", title: "Semelhanças atômicas", url: "https://olharquimico.com/exercicios-semelhancas-atomicas-gabarito/" },
+  { topicId: "Química-3", title: "Distribuição eletrônica", url: "https://olharquimico.com/exercicios-distribuicao-eletronica-gabarito-resolucao/" },
+  { topicId: "Química-1", title: "Gráficos de aquecimento e resfriamento", url: "https://olharquimico.com/grafico-de-aquecimento-e-resfriamento-de-substancia-pura/" },
+  { topicId: "Química-7", title: "Tipos de reações químicas", url: "https://olharquimico.com/exercicios-sobre-tipos-de-reacoes-quimicas-reacoes-inorganicas/" },
+  { topicId: "Química-2", title: "Métodos de separação de misturas", url: "https://olharquimico.com/exercicios-separacao-de-misturas-gabarito/" },
+  { topicId: "Química-12", title: "Número de oxidação", url: "https://olharquimico.com/exercicios-sobre-numero-de-oxidacao-nox-com-gabarito/" },
+  { topicId: "Química-1", title: "Questões sobre estados físicos", url: "https://olharquimico.com/estados-fisicos-materia-exercicios-gabarito/" },
 ];
+
+function practiceLists(topic: Topic) {
+  return generalChemistryExercises.filter(list => list.topicId === topic.id);
+}
 
 function GeneralChemistryExercises() {
   return (
