@@ -1,0 +1,1726 @@
+{
+  "Matemática-1": [
+    {
+      "title": "Ordem das operações em expressões numéricas",
+      "url": "https://www.todamateria.com.br/exercicios-de-expressoes-numericas/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Escreva uma linha por operação e compare a primeira etapa em que seu resultado divergir."
+    },
+    {
+      "title": "Divisores e decomposição em primos",
+      "url": "https://portaldosaber.obmep.org.br/uploads/material/5q3auhpbfi4gs.pdf",
+      "source": "OBMEP / IMPA",
+      "kind": "Aplicação",
+      "note": "Comece pelos exercícios introdutórios e use a fatoração para contar os divisores sem listar todos."
+    }
+  ],
+  "Matemática-2": [
+    {
+      "title": "Comparação e operações com inteiros",
+      "url": "https://www.todamateria.com.br/exercicios-de-numeros-inteiros/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Comece pelos exercícios 2 e 3 para treinar a comparação de números negativos e a regra de sinais."
+    },
+    {
+      "title": "Frações, decimais e representação dos racionais",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-numeros-racionais/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Converta frações em decimais na questão 7 e use uma fração de uma quantidade na questão 12 do ENEM."
+    }
+  ],
+  "Matemática-3": [
+    {
+      "title": "Proporção direta e inversa",
+      "url": "https://www.todamateria.com.br/regra-de-tres-simples-exercicios/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Antes de montar cada proporção, anote se a segunda grandeza cresce ou diminui quando a primeira aumenta."
+    },
+    {
+      "title": "Escalas em mapas, plantas e maquetes",
+      "url": "https://www.unifal-mg.edu.br/bibliotecas/wp-content/uploads/sites/125/2021/12/25-E-book_Temas_de_Matematica_no_ENEM.pdf#page=71",
+      "source": "UNIFAL-MG",
+      "kind": "Questão de prova",
+      "note": "Na seção 3.3, transforme as medidas do desenho e do objeto na mesma unidade. O gabarito vem ao fim da seção."
+    }
+  ],
+  "Matemática-4": [
+    {
+      "title": "Porcentagens, acréscimos e descontos",
+      "url": "https://www.todamateria.com.br/exercicios-de-porcentagem/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Identifique o valor que representa 100% antes de calcular cada desconto ou acréscimo."
+    },
+    {
+      "title": "Qual promoção dá o maior desconto?",
+      "url": "https://xequematenem.com.br/blog/questao-140-enem-ppl-2024/",
+      "source": "Xequemat",
+      "kind": "Questão de prova",
+      "note": "Nesta questão do ENEM PPL 2024, calcule o desconto sobre a quantidade levada em cada oferta."
+    }
+  ],
+  "Matemática-5": [
+    {
+      "title": "Propriedades das potências",
+      "url": "https://www.mat.ufmg.br/pet/wp-content/uploads/2020/09/PotenciacaoExercicios-Propostos.pdf",
+      "source": "PET Matemática / UFMG",
+      "kind": "Fixação",
+      "note": "Comece pela questão 2, reduzindo cada expressão a uma única potência. Confira o gabarito no fim do PDF."
+    },
+    {
+      "title": "Índices, raízes e simplificação de radicais",
+      "url": "https://www.todamateria.com.br/radiciacao-exercicios/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Nas questões 4 e 5, procure fatores que saem da raiz e pratique escrever radicais com o mesmo índice."
+    }
+  ],
+  "Matemática-6": [
+    {
+      "title": "Da igualdade ao problema escrito",
+      "url": "https://cdnportaldaobmep.impa.br/portaldaobmep/uploads/material/7tibk1tt4z488.pdf",
+      "source": "OBMEP / IMPA",
+      "kind": "Fixação",
+      "note": "Comece pelos itens 1a a 1d. Na questão 2, defina a incógnita antes de escrever a equação. Confira as soluções ao final."
+    },
+    {
+      "title": "Equações com uma incógnita",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-equacao-do-1-grau.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Resolva as primeiras igualdades e depois monte a equação da questão 6 a partir do enunciado."
+    },
+    {
+      "title": "Equações com frações e problemas de parcelas",
+      "url": "https://www.mat.ufmg.br/pet/equacoes-equacao-do-primeiro-grau/",
+      "source": "PET Matemática / UFMG",
+      "kind": "Aplicação",
+      "note": "Abra a lista de exercícios propostos. Faça as questões 1 e 5 e confira o passo a passo na resolução da mesma lista."
+    },
+    {
+      "title": "Conta de energia e limite de consumo",
+      "url": "https://xequematenem.com.br/blog/questao-158-enem-ppl-2024/",
+      "source": "Xequemat",
+      "kind": "Questão de prova",
+      "note": "Separe as faixas de tarifa do ENEM PPL 2024 e monte uma equação para o consumo adicional em kWh."
+    }
+  ],
+  "Matemática-7": [
+    {
+      "title": "Raízes e discriminante",
+      "url": "https://www.todamateria.com.br/equacao-do-2-grau-exercicios/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Identifique os coeficientes e use o discriminante para prever o número de raízes reais antes de calculá-las."
+    },
+    {
+      "title": "Sistemas com equações do segundo grau",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-sistemas-equacoes-1-o-2-o-grau.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Use substituição e confira os pares encontrados nas duas equações do sistema."
+    },
+    {
+      "title": "Estudo de sinal e inequações quadráticas",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-matematica/exercicios-sobre-inequacao-2-o-grau.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Marque as raízes na reta e teste o sinal de cada intervalo antes de escrever a solução."
+    }
+  ],
+  "Matemática-8": [
+    {
+      "title": "Taxa de variação e valor inicial",
+      "url": "https://www.todamateria.com.br/exercicios-de-funcao-afim/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Interprete o valor inicial e a taxa de variação na primeira questão antes de substituir o tempo na fórmula."
+    },
+    {
+      "title": "Retas e parábolas em seis questões do ENEM",
+      "url": "https://docentes.ifrn.edu.br/costagabriel/disciplinas/aula-ifrn-natureza-funcao-afim-e-funcao-quadratica/lista-de-exercicios-funcao-afim-e-funcao-quadratica/at_download/file",
+      "source": "IFRN",
+      "kind": "Questão de prova",
+      "note": "Na questão 2, obtenha a função a partir do gráfico de combustível. Na 4, use o vértice para comparar preços."
+    }
+  ],
+  "Matemática-9": [
+    {
+      "title": "Áreas de figuras planas",
+      "url": "https://www.todamateria.com.br/area-de-figuras-planas-exercicios/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Esboce cada figura e divida os terrenos irregulares em formas cujas áreas você sabe calcular."
+    },
+    {
+      "title": "Retas paralelas e Teorema de Tales",
+      "url": "https://cdnportaldaobmep.impa.br/portaldaobmep/uploads/material/cx2yx96tquoso.pdf#page=2",
+      "source": "OBMEP / IMPA",
+      "kind": "Aplicação",
+      "note": "Na página 2 do PDF, marque os segmentos correspondentes nas figuras antes de escrever a proporção."
+    },
+    {
+      "title": "Perímetros e áreas no ENEM",
+      "url": "https://formiga.ifmg.edu.br/documents/2020/editais/Livro_ENEM_Matemtica_2009_a_2016.pdf#page=223",
+      "source": "IFMG",
+      "kind": "Questão de prova",
+      "note": "Comece pela seção 4.1.1, na página impressa 211, e passe à 4.1.2 para distinguir contorno e superfície."
+    }
+  ],
+  "Matemática-10": [
+    {
+      "title": "Área superficial e volume de sólidos",
+      "url": "https://www.todamateria.com.br/exercicios-de-geometria-espacial/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Calcule a área e o volume do primeiro prisma e identifique a unidade de cada resultado."
+    },
+    {
+      "title": "Sólidos geométricos em situações de prova",
+      "url": "https://www.unifal-mg.edu.br/bibliotecas/wp-content/uploads/sites/125/2021/12/25-E-book_Temas_de_Matematica_no_ENEM.pdf#page=75",
+      "source": "UNIFAL-MG",
+      "kind": "Questão de prova",
+      "note": "Abra a seção 3.4. Compare o volume do cilindro e o do cone na primeira questão e confira o gabarito ao fim da seção."
+    }
+  ],
+  "Matemática-11": [
+    {
+      "title": "Seno, cosseno e tangente em triângulos",
+      "url": "https://www.todamateria.com.br/exercicios-de-trigonometria-no-triangulo-retangulo-comentados/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Marque o ângulo de referência e identifique cateto oposto, cateto adjacente e hipotenusa."
+    },
+    {
+      "title": "Radianos, arcos e círculo trigonométrico",
+      "url": "https://cdnportaldaobmep.impa.br/portaldaobmep/uploads/material/c04oipxwhcg8c.pdf",
+      "source": "OBMEP / IMPA",
+      "kind": "Fixação",
+      "note": "Desenhe os quadrantes e os arcos antes de conferir as conversões entre graus e radianos no caderno."
+    }
+  ],
+  "Matemática-12": [
+    {
+      "title": "Razão, termo geral e soma em PA e PG",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-pa-e-pg/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Escreva três termos consecutivos e identifique se o padrão usa uma diferença ou uma razão constante."
+    },
+    {
+      "title": "Juros simples, compostos e equivalência de taxas",
+      "url": "https://www.todamateria.com.br/exercicios-de-matematica-financeira/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Compare os dois regimes no exercício 5 e converta a taxa mensal para o período pedido no exercício 6."
+    },
+    {
+      "title": "Sequências e progressões no ENEM",
+      "url": "https://formiga.ifmg.edu.br/documents/2020/editais/Livro_ENEM_Matemtica_2009_a_2016.pdf#page=126",
+      "source": "IFMG",
+      "kind": "Questão de prova",
+      "note": "Na seção 2.3, comece com a progressão aritmética da página impressa 114 e avance à geométrica na 119."
+    }
+  ],
+  "Matemática-13": [
+    {
+      "title": "Contagem, arranjos e combinações",
+      "url": "https://www.todamateria.com.br/exercicios-de-analise-combinatoria/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Decida em cada problema se mudar a ordem gera uma possibilidade nova antes de escolher a operação."
+    },
+    {
+      "title": "Probabilidade em provas do ENEM",
+      "url": "https://formiga.ifmg.edu.br/documents/2020/editais/Livro_ENEM_Matemtica_2009_a_2016.pdf#page=142",
+      "source": "IFMG",
+      "kind": "Questão de prova",
+      "note": "Na seção 3.2, página impressa 130, identifique o evento e o espaço amostral antes de consultar a resolução."
+    }
+  ],
+  "Matemática-14": [
+    {
+      "title": "Média, moda e mediana",
+      "url": "https://www.todamateria.com.br/exercicios-de-media-moda-e-mediana/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Ordene as alturas na primeira questão e explique por que o valor central é a mediana."
+    },
+    {
+      "title": "Amplitude, variância e desvio padrão",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-medidas-de-dispersao/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Ao comparar conjuntos, calcule a dispersão e diga o que ela acrescenta à média."
+    },
+    {
+      "title": "Leitura de gráficos e tabelas do ENEM",
+      "url": "https://www.unifal-mg.edu.br/bibliotecas/wp-content/uploads/sites/125/2021/12/25-E-book_Temas_de_Matematica_no_ENEM.pdf#page=95",
+      "source": "UNIFAL-MG",
+      "kind": "Questão de prova",
+      "note": "Na seção 4.1, confira os eixos e as unidades antes de buscar a relação pedida. Corrija pelo gabarito da seção."
+    }
+  ],
+  "Física-1": [
+    {
+      "title": "Grandezas escalares e vetoriais",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-grandezas-fisicas-com-respostas-explicadas/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Identifique quais medidas precisam de direção e sentido para descrever um movimento."
+    },
+    {
+      "title": "Conversão de unidades",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-unidades-de-medidas/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Converta distâncias, volumes e intervalos de tempo. Registre a unidade junto de cada resultado."
+    },
+    {
+      "title": "Notação científica e ordem de grandeza",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-ordem-grandeza.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Na questão da UFV sobre gotas de água, faça uma estimativa antes do cálculo exato."
+    }
+  ],
+  "Física-2": [
+    {
+      "title": "Referencial, trajetória e velocidade média",
+      "url": "https://portaldaobmep.impa.br/index.php/modulo/ver?modulo=138&tipo=2",
+      "source": "OBMEP / IMPA",
+      "kind": "Fixação",
+      "note": "Comece pelos exercícios I de referencial, trajetória e velocidade média. A página traz as resoluções em vídeo."
+    },
+    {
+      "title": "Ida e volta na Via Anhanguera",
+      "url": "https://efisica2.if.usp.br/pluginfile.php/1648/mod_resource/content/1/F1_03_exerciciosresolvidos.pdf",
+      "source": "e-Física (USP)",
+      "kind": "Aplicação",
+      "note": "Resolva os exercícios 3.1 e 3.2 do PDF. Explique por que o deslocamento muda de sinal na volta."
+    },
+    {
+      "title": "ENEM 2025 · distância percorrida no futebol",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2025/segundo-dia/distancia-percorrida-por-esse-jogador-durante-sua-participacao-na-partida/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Use a velocidade média no segundo tempo para descobrir a distância percorrida na prorrogação."
+    }
+  ],
+  "Física-3": [
+    {
+      "title": "Gráficos de posição e velocidade",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-graficos-movimento-uniforme.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Calcule a inclinação no gráfico posição × tempo e identifique o sentido do movimento."
+    },
+    {
+      "title": "ENEM 2023 · tempo de viagem e pedágios",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2023/segundo-dia/comparado-ao-caminhao-quantos-minutos-menos-o-carro-leva-para-percorrer-toda-rodovia/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Calcule os tempos do carro e do caminhão e some as paradas ao veículo que usa as cabines."
+    }
+  ],
+  "Física-4": [
+    {
+      "title": "Aceleração e gráficos do movimento",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-movimento-uniformemente-variado.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Na questão da Uern, use o gráfico velocidade × tempo para obter a aceleração."
+    },
+    {
+      "title": "ENEM 2017 · tempo de reação e frenagem",
+      "url": "https://www.todamateria.com.br/movimento-uniformemente-variado-exercicios/",
+      "source": "Toda Matéria",
+      "kind": "Questão de prova",
+      "note": "Na primeira questão, separe o trecho de aceleração do trecho de frenagem dos dois carros."
+    }
+  ],
+  "Física-5": [
+    {
+      "title": "Queda livre e lançamento para cima",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-lancamento-vertical-queda-livre.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Compare a queda a partir do repouso com o lançamento da questão 3. Mantenha o mesmo sentido positivo em cada conta."
+    },
+    {
+      "title": "ENEM 2023 · esfera no ponto mais alto",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2023/segundo-dia/escolha-que-corresponde-combinacao-correta-e/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Desenhe a velocidade e a aceleração na subida, no topo e na descida. Compare com o gabarito."
+    }
+  ],
+  "Física-6": [
+    {
+      "title": "Força resultante e aceleração",
+      "url": "https://www.todamateria.com.br/leis-de-newton-exercicios/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Desenhe as forças no bloco da questão 2 antes de calcular a aceleração."
+    },
+    {
+      "title": "ENEM 2012 · ação e reação ao puxar um móvel",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2012-segunda-aplicacao/primeiro-dia/durante-uma-faxina-mae-pediu-que-o-filho-ajudasse-deslocando-um-movel-para-muda-lo-de-lugar/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Na questão da segunda aplicação, identifique em qual corpo atua cada uma das duas forças."
+    }
+  ],
+  "Física-7": [
+    {
+      "title": "Trabalho de uma força em esteiras",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-o-trabalho-de-uma-forca-com-gabarito-explicado/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Para cada trecho da esteira, indique a direção da força e do deslocamento da caixa."
+    },
+    {
+      "title": "Unicamp · trabalho, potência e energia",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/enem-lista-de-exercicios-sobre-trabalho-energia-e-potencia.htm",
+      "source": "Brasil Escola",
+      "kind": "Questão de prova",
+      "note": "Na primeira questão, obtenha o trabalho pela área do gráfico e use o tempo para calcular a potência."
+    }
+  ],
+  "Física-8": [
+    {
+      "title": "Impulso de uma força e variação do momento",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-impulso-quantidade-movimento.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Calcule o impulso no chute da questão 1 e use a variação do momento na questão 2."
+    },
+    {
+      "title": "ENEM 2016 · colisão de carrinhos no trilho",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2016/primeiro-dia/o-trilho-de-ar-e-um-dispositivo-utilizado-em-laboratorios-de-fisica-para-analisar-movimentos/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Extraia as velocidades dos dados dos sensores e compare o momento total antes e depois do choque."
+    }
+  ],
+  "Física-9": [
+    {
+      "title": "Estática de balanças e portas",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-estatica.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Localize o eixo de rotação. Use as distâncias perpendiculares para comparar os torques."
+    },
+    {
+      "title": "Pressão e elevadores hidráulicos",
+      "url": "https://www.todamateria.com.br/exercicios-de-hidrostatica/",
+      "source": "Toda Matéria",
+      "kind": "Questão de prova",
+      "note": "Depois das questões de pressão, resolva a questão 13, do ENEM, sobre o elevador hidráulico de um veículo."
+    }
+  ],
+  "Física-10": [
+    {
+      "title": "Período, frequência e comprimento de onda",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-ondas-periodicas.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Na questão da Ufes, determine qual grandeza permanece constante quando o som muda de meio."
+    },
+    {
+      "title": "ENEM · sonorizador de pista e absorção de luz",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/enem-lista-de-exercicios-sobre-ondas-fenomenos-ondulatorios-e-acustica.htm",
+      "source": "Brasil Escola",
+      "kind": "Questão de prova",
+      "note": "Resolva a questão de 2018 sobre frequência e a de 2017 sobre a leitura do gráfico de absorção."
+    }
+  ],
+  "Física-11": [
+    {
+      "title": "Calorimetria e mudanças de estado",
+      "url": "https://www.institutoclaro.org.br/educacao/para-aprender/roteiros-de-estudo/estudar-em-casa-calor-sensivel-e-calor-latente/",
+      "source": "Instituto Claro",
+      "kind": "Fixação",
+      "note": "Na etapa de exercícios resolvidos, separe o aquecimento da substância de sua mudança de estado."
+    },
+    {
+      "title": "Fuvest · dilatação térmica de uma barra",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-dilatacao-termica.htm",
+      "source": "Brasil Escola",
+      "kind": "Questão de prova",
+      "note": "Na primeira questão, calcule a dilatação da barra e interprete como o ponteiro amplia esse deslocamento."
+    },
+    {
+      "title": "ENEM 2017 · ciclo de um motor Diesel",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2017-segunda-aplicacao/segundo-dia/rudolf-diesel-patenteou-um-motor-combustao-interna-de-elevada-eficiencia-cujo-ciclo-esta/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Leia o diagrama pressão × volume da segunda aplicação e explique quando o gás é comprimido sem troca de calor."
+    }
+  ],
+  "Física-12": [
+    {
+      "title": "Eletrização e força de Coulomb",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-eletrostatica.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Identifique como o módulo da força depende das cargas e da distância entre elas."
+    },
+    {
+      "title": "Campo elétrico e força sobre uma carga",
+      "url": "https://cdnportaldaobmep.impa.br/portaldaobmep/uploads/material/dhbnbfuho944c.pdf",
+      "source": "OBMEP / IMPA",
+      "kind": "Aplicação",
+      "note": "No primeiro exercício do PDF, desenhe o campo, o peso e a força elétrica antes de consultar a resolução."
+    },
+    {
+      "title": "Capacitores e energia armazenada",
+      "url": "https://www.institutoclaro.org.br/educacao/para-aprender/roteiros-de-estudo/capacitores-armazenamento-energia-roteiro-estudo-exercicios/",
+      "source": "Instituto Claro",
+      "kind": "Aplicação",
+      "note": "Resolva as situações sobre carga, tensão e energia e confira o gabarito de cada etapa."
+    }
+  ],
+  "Física-13": [
+    {
+      "title": "Primeira e segunda leis de Ohm",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-lei-ohm.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Diferencie a relação entre tensão e corrente da relação entre resistência, material e dimensões do fio."
+    },
+    {
+      "title": "ENEM 2013 · resistência de um chuveiro",
+      "url": "https://educacao.globo.com/provas/enem-2013/questoes/75.html",
+      "source": "Globo Educação",
+      "kind": "Questão de prova",
+      "note": "No problema do chuveiro, mantenha a potência constante e compare os comprimentos e as áreas dos fios."
+    }
+  ],
+  "Física-14": [
+    {
+      "title": "Potência e consumo em kWh",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-fisica/exercicios-sobre-energia-eletrica.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Use a potência e o tempo de uso do chuveiro para estimar o consumo mensal."
+    },
+    {
+      "title": "ENEM 2018 · resistores em uma tela sensível ao toque",
+      "url": "https://www.todamateria.com.br/associacao-de-resistores-exercicios/",
+      "source": "Toda Matéria",
+      "kind": "Questão de prova",
+      "note": "Na primeira questão, redesenhe o circuito após o toque e identifique as associações em série e em paralelo."
+    },
+    {
+      "title": "ENEM 2025 · Placas solares e uma bomba-d’água",
+      "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestao?id_questao_tipo=15818",
+      "source": "Elite Campinas",
+      "kind": "Questão de prova",
+      "note": "Use a tensão de operação de cada placa para escolher a associação. Confira no diagrama a diferença entre tensão em aberto e tensão na bomba."
+    }
+  ],
+  "Química-1": [
+    {
+      "title": "Propriedades gerais da matéria",
+      "url": "https://olharquimico.com/exercicios-propriedades-gerais-materia-gabrito/",
+      "source": "Olhar Químico",
+      "kind": "Fixação",
+      "note": "Identifique no enunciado a propriedade geral da matéria que explica cada situação."
+    },
+    {
+      "title": "Estados físicos e mudanças de estado",
+      "url": "https://olharquimico.com/estados-fisicos-mudancas-exercicios-gabarito/",
+      "source": "Olhar Químico",
+      "kind": "Fixação",
+      "note": "Nomeie as mudanças de estado e indique em que sentido ocorre a troca de energia."
+    },
+    {
+      "title": "Gráficos de aquecimento e resfriamento",
+      "url": "https://olharquimico.com/grafico-de-aquecimento-e-resfriamento-de-substancia-pura/",
+      "source": "Olhar Químico",
+      "kind": "Aplicação",
+      "note": "Leia eixos e patamares da curva para identificar as mudanças de fase."
+    },
+    {
+      "title": "Substâncias simples e compostas",
+      "url": "https://olharquimico.com/exercicios-substancias-simples-e-compostas/",
+      "source": "Olhar Químico",
+      "kind": "Fixação",
+      "note": "Conte os tipos de átomo nas fórmulas para distinguir os dois grupos de substâncias."
+    },
+    {
+      "title": "Propriedades específicas da matéria",
+      "url": "https://olharquimico.com/propriedades-especificas-da-materia-exercicios/",
+      "source": "Olhar Químico",
+      "kind": "Fixação",
+      "note": "Escolha a propriedade que permitiria distinguir duas amostras de materiais."
+    },
+    {
+      "title": "Fenômenos físicos e químicos",
+      "url": "https://olharquimico.com/exercicios-sobre-fenomenos-fisicos-quimicos-resolvidos/",
+      "source": "Olhar Químico",
+      "kind": "Aplicação",
+      "note": "Decida se houve formação de outra substância e justifique sua classificação."
+    },
+    {
+      "title": "Questões sobre estados físicos",
+      "url": "https://olharquimico.com/estados-fisicos-materia-exercicios-gabarito/",
+      "source": "Olhar Químico",
+      "kind": "Aplicação",
+      "note": "Use os dados do enunciado para identificar o estado de cada material e depois confira o comentário."
+    }
+  ],
+  "Química-2": [
+    {
+      "title": "Métodos de separação de misturas",
+      "url": "https://olharquimico.com/exercicios-separacao-de-misturas-gabarito/",
+      "source": "Olhar Químico",
+      "kind": "Aplicação",
+      "note": "Escolha um método de separação e indique qual propriedade torna possível aplicá-lo."
+    },
+    {
+      "title": "Misturas homogêneas e heterogêneas",
+      "url": "https://olharquimico.com/exercicios-misturas-homogeneas-heterogeneas-gabarito/",
+      "source": "Olhar Químico",
+      "kind": "Fixação",
+      "note": "Diferencie o número de componentes do número de fases antes de classificar cada mistura."
+    }
+  ],
+  "Química-3": [
+    {
+      "title": "Estrutura atômica",
+      "url": "https://olharquimico.com/exercicios-estrutura-atomica-gabarito/",
+      "source": "Olhar Químico",
+      "kind": "Fixação",
+      "note": "Use os números de massa e atômico para calcular prótons, elétrons e nêutrons."
+    },
+    {
+      "title": "Modelos atômicos",
+      "url": "https://olharquimico.com/exercicios-modelos-atomicos-gabarito/",
+      "source": "Olhar Químico",
+      "kind": "Fixação",
+      "note": "Relacione as evidências experimentais às mudanças de um modelo para outro."
+    },
+    {
+      "title": "Íons, cátions e ânions",
+      "url": "https://olharquimico.com/exercicios-ions-cations-anions-gabarito/",
+      "source": "Olhar Químico",
+      "kind": "Fixação",
+      "note": "Compare prótons e elétrons para determinar a carga de cada espécie."
+    },
+    {
+      "title": "Semelhanças atômicas",
+      "url": "https://olharquimico.com/exercicios-semelhancas-atomicas-gabarito/",
+      "source": "Olhar Químico",
+      "kind": "Fixação",
+      "note": "Organize prótons, nêutrons e elétrons em uma tabela antes de comparar as espécies."
+    },
+    {
+      "title": "Distribuição eletrônica",
+      "url": "https://olharquimico.com/exercicios-distribuicao-eletronica-gabarito-resolucao/",
+      "source": "Olhar Químico",
+      "kind": "Fixação",
+      "note": "Distribua os elétrons por subnível e confira o total para o átomo ou íon indicado."
+    }
+  ],
+  "Química-4": [
+    {
+      "title": "Tabela periódica",
+      "url": "https://olharquimico.com/exercicios-tabela-periodica-gabarito/",
+      "source": "Olhar Químico",
+      "kind": "Fixação",
+      "note": "Localize família e período e use a posição do elemento para justificar suas respostas."
+    },
+    {
+      "title": "Propriedades periódicas",
+      "url": "https://olharquimico.com/exercicios-propriedades-periodicas-gabarito/",
+      "source": "Olhar Químico",
+      "kind": "Aplicação",
+      "note": "Use a posição de dois elementos para comparar raio atômico e outras tendências periódicas."
+    }
+  ],
+  "Química-5": [
+    {
+      "title": "Ligações iônicas",
+      "url": "https://olharquimico.com/exercicios-ligacoes-ionicas-gabarito-resolucao/",
+      "source": "Olhar Químico",
+      "kind": "Fixação",
+      "note": "Preveja as cargas dos íons e confira se a fórmula do composto é eletricamente neutra."
+    },
+    {
+      "title": "Ligações covalentes e fórmulas moleculares",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-ligacoes-covalentes.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Use a posição dos elementos na tabela periódica para prever quantas ligações cada átomo tende a formar."
+    },
+    {
+      "title": "Metais, ligas e condutividade",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-ligacao-metalica-com-gabarito-explicado/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Nas duas primeiras questões, distinga maleabilidade de ductilidade e relacione a condução elétrica à mobilidade dos elétrons."
+    }
+  ],
+  "Química-6": [
+    {
+      "title": "Identificação de ácidos, bases, sais e óxidos",
+      "url": "https://www.todamateria.com.br/exercicios-funcoes-inorganicas/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Classifique as substâncias e use a presença de íons para explicar a condutividade das soluções."
+    },
+    {
+      "title": "Neutralização e formação de sais",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-reacoes-neutralizacao.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Nas questões 1 e 3, escreva os produtos e identifique como o sal depende do ácido e da base."
+    }
+  ],
+  "Química-7": [
+    {
+      "title": "Tipos de reações químicas",
+      "url": "https://olharquimico.com/exercicios-sobre-tipos-de-reacoes-quimicas-reacoes-inorganicas/",
+      "source": "Olhar Químico",
+      "kind": "Fixação",
+      "note": "Compare reagentes e produtos e reconheça os padrões de síntese, decomposição e troca."
+    },
+    {
+      "title": "Balanceamento e conservação dos átomos",
+      "url": "https://www.todamateria.com.br/exercicios-de-balanceamento-quimico/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Comece com o desenho de partículas da questão 1. Conte os átomos de cada elemento nos dois lados da equação."
+    }
+  ],
+  "Química-8": [
+    {
+      "title": "Relações entre mol, massa e volume",
+      "url": "https://www.todamateria.com.br/exercicios-de-estequiometria/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Antes de fazer a regra de três, escreva a proporção em mol indicada pelos coeficientes."
+    },
+    {
+      "title": "Reagente limitante e excesso",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-reagente-excesso-reagente-limitante.htm",
+      "source": "Brasil Escola",
+      "kind": "Questão de prova",
+      "note": "Na questão da UFT, compare os mols disponíveis com a proporção exigida pela equação."
+    },
+    {
+      "title": "Rendimento real e teórico",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-rendimento-uma-reacao.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Calcule primeiro a massa teórica de ferro e depois aplique o rendimento informado."
+    }
+  ],
+  "Química-9": [
+    {
+      "title": "Concentração e diluição de soluções",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-molaridade-molalidade-concentracao-e-diluicao-de-solucoes-com-respostas-comentadas/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Diferencie g/L, mol/L e mol/kg antes de calcular os efeitos da diluição."
+    },
+    {
+      "title": "Conversão de unidades de concentração (PDF)",
+      "url": "https://www.fcav.unesp.br/Home/departamentos/tecnologia/LUCIANAMARIASARAN/unidades-de-concentracao_exercicios-resolvidos.pdf",
+      "source": "Unesp",
+      "kind": "Aplicação",
+      "note": "No exercício 1c, calcule a concentração do cloreto de potássio em g/L e mol/L e confira a resolução."
+    }
+  ],
+  "Química-10": [
+    {
+      "title": "Entalpia e lei de Hess",
+      "url": "https://www.todamateria.com.br/exercicios-termoquimica/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Na questão 3, combine as equações e justifique o sinal da variação de entalpia."
+    },
+    {
+      "title": "Energia de ativação em gráficos",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-energia-ativacao.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Nos diagramas, meça a barreira de ativação e a variação de entalpia a partir dos níveis corretos."
+    },
+    {
+      "title": "Fatores que alteram a velocidade das reações",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/exercicios-sobre-cinetica-quimica.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Na questão da PUC-RS, relacione cada situação à temperatura, à concentração, à superfície ou ao catalisador."
+    }
+  ],
+  "Química-11": [
+    {
+      "title": "pH, pOH e acidez",
+      "url": "https://www.todamateria.com.br/exercicios-ph-poh/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Na primeira questão da Fuvest, use a temperatura indicada antes de julgar se a água está neutra."
+    },
+    {
+      "title": "ENEM · Deslocamento do equilíbrio químico",
+      "url": "https://www.todamateria.com.br/exercicios-equilibrio-quimico/",
+      "source": "Toda Matéria",
+      "kind": "Questão de prova",
+      "note": "Nas questões 11 e 12, explique o efeito da acidez no esmalte e da pressão no refrigerante."
+    }
+  ],
+  "Química-12": [
+    {
+      "title": "Número de oxidação",
+      "url": "https://olharquimico.com/exercicios-sobre-numero-de-oxidacao-nox-com-gabarito/",
+      "source": "Olhar Químico",
+      "kind": "Fixação",
+      "note": "Determine o número de oxidação de cada espécie e descubra qual elemento perdeu elétrons."
+    },
+    {
+      "title": "Pilhas, potenciais e corrosão",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-quimica/enem-lista-de-exercicios-sobre-pilhas.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Na questão da FGV, use os potenciais de redução para identificar o metal que se oxida."
+    },
+    {
+      "title": "ENEM 2010 · Eletrólise e reciclagem de cobre",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2010/primeiro-dia/eletrolise-e-muito-empregada-na-industria-com-o-objetivo-de-reaproveitar/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Relacione carga elétrica, quantidade de elétrons e massa de cobre recuperada."
+    }
+  ],
+  "Química-13": [
+    {
+      "title": "Funções, nomenclatura e reações orgânicas",
+      "url": "https://www.institutoclaro.org.br/educacao/para-aprender/roteiros-de-estudo/quimica-organica-enem-roteiro-estudos/",
+      "source": "Instituto Claro",
+      "kind": "Fixação",
+      "note": "Vá à 5ª etapa. Faça as questões 1, 2 e 6 para reconhecer funções, classificar uma reação e nomear uma cadeia."
+    },
+    {
+      "title": "Funções orgânicas em questões de vestibular e ENEM",
+      "url": "https://www.todamateria.com.br/exercicios-funcoes-organicas/",
+      "source": "Toda Matéria",
+      "kind": "Questão de prova",
+      "note": "Na questão 6, identifique os grupos funcionais nas estruturas de substâncias presentes na própolis."
+    }
+  ],
+  "Biologia-1": [
+    {
+      "title": "Como reconhecer um ser vivo",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-as-caracteristicas-dos-seres-vivos/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Na questão 1, use o comportamento da planta para identificar qual característica está em jogo."
+    },
+    {
+      "title": "Da célula à biosfera",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-niveis-de-organizacao-em-biologia.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Ordene os níveis de organização e explique o que distingue população de comunidade."
+    }
+  ],
+  "Biologia-2": [
+    {
+      "title": "Água, sais minerais e moléculas orgânicas",
+      "url": "https://www.todamateria.com.br/exercicios-de-bioquimica/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Associe cada substância à sua função. Comece por água, carboidratos e lipídios nas três primeiras questões."
+    },
+    {
+      "title": "ENEM 2023 · Ferro e hemoglobina",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2023/segundo-dia/os-mais-antigos-cozinhavam-o-feijao-na-panela-de-ferro-fim-de-acabar-com-palidez-de-seus-filhos/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Relacione a função do ferro no organismo ao problema de saúde apresentado."
+    }
+  ],
+  "Biologia-3": [
+    {
+      "title": "Estruturas e funções celulares",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-celulas/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Relacione cada organela à sua função e compare os componentes de células animais e vegetais."
+    },
+    {
+      "title": "ENEM 2012 · Osmose na célula humana",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2012/primeiro-dia/osmose-e-um-processo-espontaneo-que-ocorre-em-todos-os-organismos-vivos/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Compare as concentrações dos meios interno e externo e preveja o sentido do fluxo de água."
+    }
+  ],
+  "Biologia-4": [
+    {
+      "title": "Mitose, meiose e ciclos de vida",
+      "url": "https://www.todamateria.com.br/execicios-sobre-mitose-e-meiose/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Compare o número de cromossomos nas primeiras questões. Depois, interprete o desenho da Unesp na 8 e o esquema do ENEM na 10."
+    }
+  ],
+  "Biologia-5": [
+    {
+      "title": "Segregação dos alelos e cruzamentos",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-as-leis-mendel.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Monte os cruzamentos das ervilhas no papel e compare suas proporções com a resolução."
+    },
+    {
+      "title": "Heredogramas e padrões de herança",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-interpretacao-heredogramas.htm",
+      "source": "Brasil Escola",
+      "kind": "Questão de prova",
+      "note": "Na questão da Vunesp, leia os símbolos do heredograma e elimine os genótipos incompatíveis."
+    }
+  ],
+  "Biologia-6": [
+    {
+      "title": "Evidências e teorias da evolução",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-evolucao/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Separe observação e explicação ao comparar hipóteses evolutivas e evidências fósseis."
+    },
+    {
+      "title": "Seleção natural e artificial no ENEM",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/enem-lista-de-exercicios-sobre-selecao-natural.htm",
+      "source": "Brasil Escola",
+      "kind": "Questão de prova",
+      "note": "Compare o caso dos olhos dos animais com o dos frutos de pupunha. Identifique o processo descrito em cada um."
+    }
+  ],
+  "Biologia-7": [
+    {
+      "title": "Funcionamento integrado dos sistemas do corpo",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-o-corpo-humano-com-gabarito-e-comentarios/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Na questão 2, acompanhe o oxigênio dos alvéolos às células para relacionar respiração e circulação."
+    },
+    {
+      "title": "ENEM 2013 · O sentido da circulação venosa",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2013/primeiro-dia/a-imagem-representa-uma-ilustracao-retirada-do-livro-de-motu-cordis-de-autoria-do-medico-ingles/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Use a ilustração do experimento de Harvey para explicar por que o sangue circula em determinado sentido."
+    }
+  ],
+  "Biologia-8": [
+    {
+      "title": "Características de vertebrados e invertebrados",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-animais-invertebrados-e-vertebrados/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Diferencie os grupos pelos traços anatômicos citados no enunciado."
+    },
+    {
+      "title": "Grupos vegetais e reprodução",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/exercicios-sobre-botanica.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Compare vasos condutores, pólen, sementes e frutos para reconhecer cada grupo vegetal."
+    }
+  ],
+  "Biologia-9": [
+    {
+      "title": "Relações ecológicas, carbono e cadeias alimentares",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-ecologia/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Resolva o ciclo do carbono na questão 2 e interprete a pirâmide de números na 8."
+    },
+    {
+      "title": "ENEM · Impactos ambientais e conservação",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-biologia/enem-lista-de-exercicios-sobre-desequilibrios-ambientais.htm",
+      "source": "Brasil Escola",
+      "kind": "Questão de prova",
+      "note": "Na questão sobre hidrelétricas, separe a mudança imediata no habitat dos efeitos posteriores."
+    },
+    {
+      "title": "Biomas brasileiros em mapas e descrições",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-biomas-brasileiros.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Use clima, disponibilidade de água e vegetação para diferenciar os biomas citados."
+    }
+  ],
+  "Biologia-10": [
+    {
+      "title": "ENEM 2015 · Biotecnologia na produção de insulina",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2015/primeiro-dia/a-palavra-biotecnologia-surgiu-no-seculo-xx-quando-o-cientista-herbert-boyer/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Diferencie a informação genética de seu produto ao interpretar a aplicação descrita."
+    },
+    {
+      "title": "ENEM 2013 · Interpretação de um teste de DNA",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2013/primeiro-dia/cinco-casais-alegavam-ser-os-pais-de-um-bebe-a-confirmacao-da-paternidade/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Compare as faixas da criança com as dos casais e justifique cada exclusão pelo gráfico."
+    }
+  ],
+  "Biologia-11": [
+    {
+      "title": "Resposta imunológica e memória vacinal",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-o-sistema-imunologico-com-gabarito/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Use a primeira questão para explicar por que a resposta muda após novo contato com o antígeno."
+    },
+    {
+      "title": "ENEM 2012 · Saneamento e prevenção de doenças",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2012/primeiro-dia/medidas-de-saneamento-basico-sao-fundamentais-no-processo-de-promocao-de-saude/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Use as condições de saneamento descritas para identificar a via de exposição."
+    },
+    {
+      "title": "ENEM 2015 · Leitura de indicadores de saúde",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2015-segunda-aplicacao/segundo-dia/doencas-relacionadas-ao-saneamento-ambiental-inadequado-drsai-podem-estar-associadas/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Compare no gráfico os casos de duas doenças associadas ao saneamento e encontre a maior diferença mensal."
+    }
+  ],
+  "Português-1": [
+    {
+      "title": "Leitura e inferência em textos de ensino médio",
+      "url": "https://www.todamateria.com.br/exercicios-de-interpretacao-de-texto-para-3-ano-do-ensino-medio-com-gabarito/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Antes de ver a resposta, marque a frase que sustenta a sua interpretação."
+    },
+    {
+      "title": "ENEM 2025 · Como um texto convence o leitor",
+      "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestao?id_questao_tipo=15718",
+      "source": "Elite Campinas",
+      "kind": "Questão de prova",
+      "note": "Identifique o público e explique qual recurso organiza os argumentos sobre leitura infantil."
+    }
+  ],
+  "Português-2": [
+    {
+      "title": "Narração, descrição, exposição e argumentação",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-tipologias-textuais-com-gabarito-explicado/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Decida se cada trecho procura contar, caracterizar, informar ou defender uma ideia."
+    },
+    {
+      "title": "Gêneros textuais e situação de comunicação",
+      "url": "https://www.todamateria.com.br/generos-textuais-exercicios/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Use destinatário, finalidade e marcas de linguagem para reconhecer o gênero de cada texto."
+    },
+    {
+      "title": "ENEM 2025 · A crônica e seu suporte",
+      "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestao?id_questao_tipo=15730",
+      "source": "Elite Campinas",
+      "kind": "Questão de prova",
+      "note": "Relacione o lugar de publicação à maneira como o cronista organiza seu texto."
+    }
+  ],
+  "Português-3": [
+    {
+      "title": "Grafia, hífen e convenções da escrita",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-ortografia.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Reescreva as formas que parecerem duvidosas e confira a explicação de cada grafia."
+    },
+    {
+      "title": "Acentuação gráfica em textos e palavras",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-acentuacao-grafica.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Comece pela questão da placa de sapataria e depois compare as regras aplicadas às outras palavras."
+    }
+  ],
+  "Português-4": [
+    {
+      "title": "Classes gramaticais em frases e textos",
+      "url": "https://www.todamateria.com.br/exercicios-classes-de-palavras/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Observe a palavra no enunciado e explique o que ela conecta, modifica ou nomeia."
+    },
+    {
+      "title": "ENEM 2021 · Pronomes de tratamento em uso",
+      "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestao?id_questao_tipo=6495",
+      "source": "Elite Campinas",
+      "kind": "Questão de prova",
+      "note": "Compare quem usa “tu” e “você”, em que lugar e em que época."
+    }
+  ],
+  "Português-5": [
+    {
+      "title": "Sujeito, predicado e complementos",
+      "url": "https://www.todamateria.com.br/exercicios-de-analise-sintatica/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Localize o verbo de cada oração e identifique a que termo se liga cada complemento."
+    },
+    {
+      "title": "Fuvest 2025 · Ordem dos termos em uma charge",
+      "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestao?id_questao_tipo=14912",
+      "source": "Elite Campinas",
+      "kind": "Questão de prova",
+      "note": "Reescreva a fala na ordem direta e compare seu efeito com o desenho da charge."
+    }
+  ],
+  "Português-6": [
+    {
+      "title": "Relações de sentido entre orações coordenadas",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-as-oracoes-coordenadas.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Separe as orações e distinga adição, oposição, alternância, conclusão e explicação."
+    },
+    {
+      "title": "Orações subordinadas em vestibulares",
+      "url": "https://www.mundovestibular.com.br/blog/exercicios-de-oracoes-subordinadas",
+      "source": "Mundo Vestibular",
+      "kind": "Aplicação",
+      "note": "Identifique a oração principal e verifique que função a subordinada exerce no trecho."
+    }
+  ],
+  "Português-7": [
+    {
+      "title": "Concordância verbal e nominal",
+      "url": "https://www.todamateria.com.br/exercicios-de-concordancia-verbal-e-nominal/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Identifique o núcleo do sujeito e confira quais palavras precisam concordar com ele ou com o substantivo."
+    },
+    {
+      "title": "Regência de verbos e nomes",
+      "url": "https://www.todamateria.com.br/exercicios-de-regencia-verbal-e-nominal-com-gabarito/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Para cada complemento, anote qual palavra exige a preposição e teste a frase completa."
+    },
+    {
+      "title": "Fuvest 2010 · Concordância na reescrita de um anúncio",
+      "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestaoLista?ano=2010&id_questao_lista=149479&prova_vestibular_id=10872&vestibular=fuvest",
+      "source": "Elite Campinas",
+      "kind": "Questão de prova",
+      "note": "No item B, passe os sujeitos para o plural e confira quais verbos mudam."
+    }
+  ],
+  "Português-8": [
+    {
+      "title": "Efeitos de sentido dos sinais de pontuação",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-sinais-pontuacao.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Nas três primeiras questões, explique o que a pontuação acrescenta ao sentido do texto."
+    },
+    {
+      "title": "Coesão de parágrafos e escolha de conectivos",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-identificar-erros-de-coesao-e-coerencia-com-gabarito-explicado/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Escolha um conectivo que ligue as ideias e compare a relação de sentido com a do gabarito."
+    },
+    {
+      "title": "ENEM 2025 · Como a autora retoma a própria tese",
+      "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestao?id_questao_tipo=15752",
+      "source": "Elite Campinas",
+      "kind": "Questão de prova",
+      "note": "Compare o último parágrafo com o restante da crônica para reconhecer a síntese da opinião."
+    }
+  ],
+  "Português-9": [
+    {
+      "title": "Sentido literal e figurado, homônimos e parônimos",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-semantica/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Para cada par de palavras, verifique que significado cabe na frase."
+    },
+    {
+      "title": "Figuras de linguagem em tirinhas, poemas e anúncios",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-gramatica/exercicios-sobre-figuras-linguagem.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Comece pelas questões do ENEM e explique o efeito da figura antes de procurar seu nome."
+    }
+  ],
+  "Português-10": [
+    {
+      "title": "Registros de linguagem e adequação ao contexto",
+      "url": "https://www.todamateria.com.br/exercicios-variacoes-linguisticas/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Compare a situação, os interlocutores e o grau de formalidade nas questões comentadas."
+    },
+    {
+      "title": "ENEM 2024 · Adoniran Barbosa e o preconceito linguístico",
+      "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestao?id_questao_tipo=13494",
+      "source": "Elite Campinas",
+      "kind": "Questão de prova",
+      "note": "Compare a fala do compositor com os julgamentos sobre sua maneira de escrever samba."
+    }
+  ],
+  "Português-11": [
+    {
+      "title": "Literatura brasileira em leituras comparadas",
+      "url": "https://www.todamateria.com.br/exercicios-de-literatura-para-estudar-para-o-enem-com-questoes-resolvidas/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Na questão 3, compare os poemas de Gonçalves Dias e Oswald de Andrade e explique o que muda entre eles."
+    },
+    {
+      "title": "ENEM 2024 · São Bernardo, de Graciliano Ramos",
+      "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestao?id_questao_tipo=13480",
+      "source": "Elite Campinas",
+      "kind": "Questão de prova",
+      "note": "Releia o diálogo e identifique qual ideia de escrita literária cada personagem defende."
+    }
+  ],
+  "História-1": [
+    {
+      "title": "Pólis e cidadania na Grécia",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-grecia-antiga/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Identifique quem podia participar das decisões em Atenas e compare com Esparta."
+    },
+    {
+      "title": "Instituições e conflitos em Roma",
+      "url": "https://www.todamateria.com.br/exercicios-roma-antiga/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Use os trechos sobre patrícios e plebeus para explicar a disputa por direitos."
+    },
+    {
+      "title": "ENEM 2015 · Democracia ateniense",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2015/primeiro-dia/o-que-implica-o-sistema-da-polis-e-uma-extraordinaria-preeminencia-da-palavra-sobre-todos-os-outros/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Leia o trecho de Vernant e relacione o espaço da ágora ao debate público."
+    }
+  ],
+  "História-2": [
+    {
+      "title": "Feudalismo e relações de trabalho",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-feudalismo/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Diferencie obrigações servis, vínculos de vassalagem e poder da Igreja."
+    },
+    {
+      "title": "Transformações na Baixa Idade Média",
+      "url": "https://www.todamateria.com.br/questoes-sobre-a-baixa-idade-media/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Reconheça os sinais de mudança no comércio, nas cidades e no poder político."
+    }
+  ],
+  "História-3": [
+    {
+      "title": "Humanismo e Renascimento",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-renascimento.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Encontre nos textos a mudança de atitude diante da ciência e da autoridade."
+    },
+    {
+      "title": "Reformas religiosas na Europa",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-reforma-protestante/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Compare as doutrinas e associe cada ruptura a seus efeitos políticos."
+    }
+  ],
+  "História-4": [
+    {
+      "title": "Expansão marítima e comércio atlântico",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia-do-brasil/exercicios-sobre-as-grandes-navegacoes.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Relacione o apoio das monarquias e dos mercadores às mudanças no comércio europeu."
+    },
+    {
+      "title": "Conquista da América sob diferentes perspectivas",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-conquista-america-espanhola.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Compare os relatos sobre a conquista espanhola e as consequências para os povos indígenas."
+    }
+  ],
+  "História-5": [
+    {
+      "title": "Organização do Brasil Colônia",
+      "url": "https://www.todamateria.com.br/exercicios-brasil-colonial/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Comece pelas questões básicas e avance até as que relacionam colonização, trabalho e economia."
+    },
+    {
+      "title": "Palmares e a resistência à escravidão",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia-do-brasil/exercicios-sobre-quilombo-dos-palmares.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Explique como a organização de Palmares desafiava a sociedade escravista."
+    },
+    {
+      "title": "ENEM 2012 · Economia do açúcar",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2012-segunda-aplicacao/primeiro-dia/dos-senhores-dependem-os-lavradores-que-tem-partidos-arrendados-em-terras-mesmo-engenho/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Use o relato colonial para reconstruir a relação entre lavradores de cana e senhores de engenho."
+    }
+  ],
+  "História-6": [
+    {
+      "title": "Revolução Francesa e crise do Antigo Regime",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia/exercicios-sobre-revolucao-francesa.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Distinga os interesses dos grupos que participaram da revolução."
+    },
+    {
+      "title": "Revolução Industrial e transformação do trabalho",
+      "url": "https://www.todamateria.com.br/questoes-sobre-revolucao-industrial/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Relacione as fontes de energia e as máquinas às mudanças nas condições de trabalho."
+    },
+    {
+      "title": "Independências da América espanhola",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia-da-america/exercicios-sobre-independencia-america-espanhola.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Explique o conflito entre criollos e chapetones e sua relação com a crise na Espanha."
+    }
+  ],
+  "História-7": [
+    {
+      "title": "Império, Constituição e Regências",
+      "url": "https://www.todamateria.com.br/exercicio-sobre-o-brasil-imperio-com-gabarito-explicado/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Compare a distribuição de poder em 1824 com as disputas do período regencial."
+    },
+    {
+      "title": "ENEM 2011 · Coronelismo e cidadania",
+      "url": "https://educacao.globo.com/provas/enem-2011/questoes/17.html",
+      "source": "Globo Educação",
+      "kind": "Questão de prova",
+      "note": "Encontre no texto o vínculo entre dependência econômica e controle do voto."
+    }
+  ],
+  "História-8": [
+    {
+      "title": "Imperialismo e Primeira Guerra Mundial",
+      "url": "https://www.todamateria.com.br/questoes-sobre-primeira-guerra-mundial/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Relacione a disputa colonial e as rivalidades europeias às causas do conflito."
+    },
+    {
+      "title": "Segunda Guerra Mundial e o entreguerras",
+      "url": "https://www.todamateria.com.br/questoes-segunda-guerra-mundial/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Interprete o discurso de Churchill e identifique as relações entre os dois conflitos."
+    },
+    {
+      "title": "Guerra Fria e os blocos de poder",
+      "url": "https://www.todamateria.com.br/questoes-sobre-guerra-fria/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Distinga disputa ideológica, áreas de influência e os conflitos ligados à bipolaridade."
+    }
+  ],
+  "História-9": [
+    {
+      "title": "Ditadura militar e restrição de direitos",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-historia-do-brasil/exercicios-sobre-ditadura-militar-no-brasil.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Na carta de 1979, identifique como o Estado restringia a ação de opositores."
+    },
+    {
+      "title": "Abertura política e redemocratização",
+      "url": "https://www.todamateria.com.br/questoes-sobre-a-redemocratizacao-do-brasil/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Compare a abertura iniciada em 1975 com a mobilização pelas eleições diretas."
+    },
+    {
+      "title": "ENEM 2014 · Direitos na Constituição de 1988",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2014/primeiro-dia/a-discussao-levantada-na-charge-publicada-logo-apos-a-promulgacao-da-constituicao-de-1988/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Interprete a charge e associe as reivindicações ao tipo de direito previsto na Constituição."
+    },
+    {
+      "title": "Unicamp 2025 · Cidadania na Constituinte",
+      "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestao?id_questao_tipo=13118",
+      "source": "Elite Campinas",
+      "kind": "Questão de prova",
+      "note": "Leia a charge de Henfil junto com os textos e identifique como a noção de cidadania se ampliou."
+    }
+  ],
+  "História-10": [
+    {
+      "title": "A ordem mundial após a Guerra Fria",
+      "url": "https://exercicios.mundoeducacao.uol.com.br/exercicios-geografia/exercicios-sobre-nova-ordem-mundial.htm",
+      "source": "Mundo Educação",
+      "kind": "Fixação",
+      "note": "Relacione o fim da bipolaridade à reorganização dos centros de poder."
+    },
+    {
+      "title": "ENEM 2021 · Refúgio e integração",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2021/primeiro-dia/condicao-de-transitoriedade-dos-refugiados-no-brasil-conforme-abordada-no-texto-e-provocada-pela/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Identifique no texto as dimensões culturais e jurídicas que afetam quem busca refúgio."
+    }
+  ],
+  "Geografia-1": [
+    {
+      "title": "Leitura e elementos dos mapas",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-cartografia-com-gabarito-explicado/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Compare mapa, planta e croqui e identifique o papel das legendas e escalas."
+    },
+    {
+      "title": "Projeções e distorções cartográficas",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-projecoes-enem/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Use as figuras para decidir o que cada projeção preserva ou distorce."
+    },
+    {
+      "title": "Unicamp 2025 · Escala e nível de detalhe",
+      "url": "https://sisq.elitecampinas.com.br/GabaritoVestibulares/VisualizarQuestao?id_questao_tipo=13150",
+      "source": "Elite Campinas",
+      "kind": "Questão de prova",
+      "note": "Compare os mapas e explique por que um estudo de impacto ambiental exige determinada escala."
+    }
+  ],
+  "Geografia-2": [
+    {
+      "title": "Camadas da Terra e tectônica de placas",
+      "url": "https://exercicios.mundoeducacao.uol.com.br/exercicios-geografia/exercicios-sobre-placas-tectonicas.htm",
+      "source": "Mundo Educação",
+      "kind": "Fixação",
+      "note": "Relacione o movimento das placas aos processos internos da Terra."
+    },
+    {
+      "title": "Agentes de formação do relevo",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-agentes-do-relevo-internos-e-externos-com-gabarito/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Diferencie as marcas deixadas por tectonismo, água e vento em cada exemplo."
+    }
+  ],
+  "Geografia-3": [
+    {
+      "title": "Climas brasileiros e massas de ar",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-climas-do-brasil/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Explique os padrões de temperatura e chuva usando a posição e a origem das massas de ar."
+    },
+    {
+      "title": "Biomas e cobertura vegetal do Brasil",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-biomas-brasileiros/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Associe a vegetação descrita às condições de clima e à localização dos biomas."
+    }
+  ],
+  "Geografia-4": [
+    {
+      "title": "Bacias e regimes dos rios brasileiros",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia-do-brasil/exercicios-sobre-as-principais-bacias-hidrograficas-brasil.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Reconheça o rio principal, os afluentes e o que determina o regime de vazão."
+    },
+    {
+      "title": "Crise hídrica e gestão da água",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-crise-hidrica-no-brasil-com-gabarito/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Compare disponibilidade, demanda e distribuição da água para explicar a escassez."
+    }
+  ],
+  "Geografia-5": [
+    {
+      "title": "Leitura de pirâmides etárias",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-piramides-etarias.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Use base e topo da pirâmide para interpretar natalidade e envelhecimento."
+    },
+    {
+      "title": "Êxodo rural e urbanização no Brasil",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia-do-brasil/exercicios-sobre-urbanizacao-no-brasil.htm",
+      "source": "Brasil Escola",
+      "kind": "Aplicação",
+      "note": "Relacione migração, industrialização e formação das redes urbanas."
+    },
+    {
+      "title": "ENEM 2009 · Migração interna e cidades",
+      "url": "https://educacao.globo.com/provas/enem-2009/questoes/75.html",
+      "source": "Globo Educação",
+      "kind": "Questão de prova",
+      "note": "Interprete os dados do IBGE sobre o fluxo Nordeste–Sudeste e identifique seu efeito urbano."
+    }
+  ],
+  "Geografia-6": [
+    {
+      "title": "Terra e trabalho no campo brasileiro",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-concentracao-fundiaria-no-brasil.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Identifique as relações entre tamanho das propriedades, formas de trabalho e conflitos."
+    },
+    {
+      "title": "UERJ 2024 · Agronegócio e localização industrial",
+      "url": "https://www.revista.vestibular.uerj.br/arquivos/pdf/questao/46.pdf#search=EXPORTA%C3%87%C3%95ES%20DO%20AGRONEG%C3%93CIO",
+      "source": "UERJ",
+      "kind": "Questão de prova",
+      "note": "Em Geografia, faça as questões 7 e 8. Explique o crescimento das exportações e leia o mapa das indústrias."
+    },
+    {
+      "title": "ENEM 2012 · Desconcentração industrial",
+      "url": "https://educacao.globo.com/provas/enem-2012/questoes/36.html",
+      "source": "Globo Educação",
+      "kind": "Questão de prova",
+      "note": "Explique como a produção se desloca pelo país e onde se concentram as decisões empresariais."
+    }
+  ],
+  "Geografia-7": [
+    {
+      "title": "Território, Estado e nação",
+      "url": "https://exercicios.mundoeducacao.uol.com.br/exercicios-geografia/exercicios-sobre-diferencas-entre-estado-pais-nacao-territorio.htm",
+      "source": "Mundo Educação",
+      "kind": "Fixação",
+      "note": "Use o texto de Milton Santos e María Laura Silveira para distinguir os conceitos."
+    },
+    {
+      "title": "Território e conflitos no Oriente Médio",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-os-conflitos-no-oriente-medio-com-respostas-explicadas/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Relacione os interesses territoriais e as fronteiras aos conflitos abordados na lista."
+    }
+  ],
+  "Geografia-8": [
+    {
+      "title": "Redes e fluxos da globalização",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-globalizacao.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Associe mudanças técnicas à circulação de mercadorias, capitais e informações."
+    },
+    {
+      "title": "ENEM 2015 · Produção em rede",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2015-segunda-aplicacao/primeiro-dia/nao-acho-que-seja-possivel-identificar-globalizacao-apenas-com-criacao-de-uma-economia-global/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Identifique no texto de Hobsbawm o fator que permite organizar a produção em vários países."
+    }
+  ],
+  "Geografia-9": [
+    {
+      "title": "Sustentabilidade e uso de recursos",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-geografia/exercicios-sobre-sustentabilidade.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Avalie quais práticas conciliam atividade econômica, conservação e condições de vida."
+    },
+    {
+      "title": "ENEM 2024 · Negociação climática na COP26",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2024/primeiro-dia/26a-conferencia-clima-das-nacoes-unidas-foi-realizada-com-perspectiva-de-que-os-paises/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Compare o papel de governos, empresas e sociedade civil no compromisso climático descrito."
+    }
+  ],
+  "Geografia-10": [
+    {
+      "title": "Divisão regional e complexos geoeconômicos",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-regioes-geoeconomicas-do-brasil/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Compare o critério de Pedro Geiger com os limites da divisão regional do IBGE."
+    },
+    {
+      "title": "ENEM 2009 · Mapa do PIB por habitante",
+      "url": "https://educacao.globo.com/provas/enem-2009/questoes/73.html",
+      "source": "Globo Educação",
+      "kind": "Questão de prova",
+      "note": "Leia a legenda e relacione os contrastes no mapa à distribuição das atividades econômicas."
+    }
+  ],
+  "Redação-1": [
+    {
+      "title": "Desmonte uma redação comentada do Enem",
+      "url": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/a_redacao_no_enem_2025_cartilha_do_participante.pdf#page=43",
+      "source": "Inep",
+      "kind": "Oficina de escrita",
+      "note": "Na redação de Ana Clara Pereira, resuma em uma frase a função de cada parágrafo. Compare seu esquema com o comentário do Inep na página seguinte."
+    },
+    {
+      "title": "Monte a estrutura de um texto curto",
+      "url": "https://rotinadiaria.com/estudos/materiais/redacao-enem/estrutura-dissertativo-argumentativa",
+      "source": "Rotina Diária",
+      "kind": "Oficina de escrita",
+      "note": "Use o exemplo do desperdício de alimentos para escrever uma tese, uma justificativa e uma intervenção. Confira no exercício 4 como a conclusão retoma os argumentos."
+    }
+  ],
+  "Redação-2": [
+    {
+      "title": "Planeje um texto sobre envelhecimento no Brasil",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2025_PV_impresso_D1_CD1.pdf#page=20",
+      "source": "Inep",
+      "kind": "Questão de prova",
+      "note": "Na proposta de 2025, confronte o gráfico de renda com o relato literário. Escreva sua tese e planeje dois parágrafos, cada um com uma ideia diferente que a sustente."
+    },
+    {
+      "title": "Tese e argumento em textos sobre tecnologia",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-identificar-teses-e-argumentos-nos-textos-ensino-medio/",
+      "source": "Toda Matéria",
+      "kind": "Oficina de escrita",
+      "note": "Resolva a questão 2 sobre automação industrial. Depois, formule uma tese sobre requalificação profissional e indique que evidência seria necessária para defendê-la."
+    }
+  ],
+  "Redação-3": [
+    {
+      "title": "Escreva duas aberturas para o mesmo tema",
+      "url": "https://www2.unifap.br/unienem/files/2023/06/CADERNO-REDACAO-ANA-VIANA.pdf#page=2",
+      "source": "Universidade Federal do Amapá",
+      "kind": "Oficina de escrita",
+      "note": "Observe como a oficina usa filmes e fatos históricos. Escreva duas introduções sobre inclusão digital de idosos e sublinhe a frase que liga o contexto à sua tese."
+    },
+    {
+      "title": "Revise uma introdução genérica",
+      "url": "https://rotinadiaria.com/estudos/materiais/redacao-enem/como-fazer-a-introducao",
+      "source": "Rotina Diária",
+      "kind": "Oficina de escrita",
+      "note": "Faça o exercício 1 antes de ver a resposta. Na sua versão, destaque a posição defendida sobre a valorização dos professores e o problema concreto que será discutido."
+    }
+  ],
+  "Redação-4": [
+    {
+      "title": "Construa um parágrafo com argumento e exemplo",
+      "url": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/a_redacao_no_enem_2025_cartilha_do_participante.pdf#page=29",
+      "source": "Inep",
+      "kind": "Oficina de escrita",
+      "note": "Defenda uma ideia sobre etarismo no trabalho em um parágrafo. Dê um exemplo e explique por que ele sustenta a sua posição. Confira as orientações da Competência III."
+    },
+    {
+      "title": "Ordene e desenvolva um argumento",
+      "url": "https://rotinadiaria.com/estudos/materiais/redacao-enem/desenvolvimento-e-repertorio",
+      "source": "Rotina Diária",
+      "kind": "Oficina de escrita",
+      "note": "Resolva o exercício 1 sobre transporte de alimentos. Em outro parágrafo, mostre como o desperdício pode ocorrer no comércio e ligue a explicação à sua ideia principal."
+    }
+  ],
+  "Redação-5": [
+    {
+      "title": "Transforme uma referência em argumento",
+      "url": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/a_redacao_no_enem_2025_cartilha_do_participante.pdf#page=20",
+      "source": "Inep",
+      "kind": "Oficina de escrita",
+      "note": "No exemplo sobre a historiadora Beatriz Nascimento, identifique o fato e a interpretação. Use outra referência de sua escolha para sustentar uma tese sobre memória afro-brasileira."
+    },
+    {
+      "title": "Use o jongo como repertório",
+      "url": "https://bcr.iphan.gov.br/bens-culturais/jongo-no-sudeste/",
+      "source": "Iphan",
+      "kind": "Oficina de escrita",
+      "note": "Escolha um fato documentado sobre o jongo. Escreva três frases mostrando como esse fato ajuda a defender a valorização da herança africana no Brasil."
+    }
+  ],
+  "Redação-6": [
+    {
+      "title": "Reescreva frases preservando o sentido",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-conectivos/",
+      "source": "Toda Matéria",
+      "kind": "Oficina de escrita",
+      "note": "Resolva as questões 1 e 4 e confira as respostas. Em um parágrafo seu, troque um conectivo e explique se a relação entre as ideias continua a mesma."
+    },
+    {
+      "title": "Revise a ligação entre dois parágrafos",
+      "url": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/a_redacao_no_enem_2025_cartilha_do_participante.pdf#page=32",
+      "source": "Inep",
+      "kind": "Critérios oficiais",
+      "note": "Sublinhe, em dois parágrafos seus, as palavras que retomam ideias anteriores. Esclareça um pronome ambíguo ou uma passagem brusca e releia a transição."
+    }
+  ],
+  "Redação-7": [
+    {
+      "title": "Escreva uma intervenção e confira os cinco elementos",
+      "url": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/a_redacao_no_enem_2025_cartilha_do_participante.pdf#page=35",
+      "source": "Inep",
+      "kind": "Oficina de escrita",
+      "note": "Proponha uma ação contra a exclusão digital de idosos. Identifique agente, ação, meio, finalidade e um detalhe. Confira se a medida responde ao problema e respeita os direitos humanos."
+    },
+    {
+      "title": "Transforme um diagnóstico em ação",
+      "url": "https://rotinadiaria.com/estudos/materiais/redacao-enem/proposta-de-intervencao",
+      "source": "Rotina Diária",
+      "kind": "Oficina de escrita",
+      "note": "Reescreva o exemplo sobre ruído urbano do exercício 2 antes de abrir a resposta. Mostre quem pode agir, como e com qual resultado esperado."
+    }
+  ],
+  "Redação-8": [
+    {
+      "title": "Avalie seu rascunho pelas cinco competências",
+      "url": "https://www.gov.br/inep/pt-br/centrais-de-conteudo/acervo-linha-editorial/publicacoes-institucionais/avaliacoes-e-exames-da-educacao-basica/a-redacao-do-enem-2026-cartilha-do-a-participante",
+      "source": "Inep",
+      "kind": "Critérios oficiais",
+      "note": "Abra a Cartilha 2026. Confira as situações de nota zero e localize no seu rascunho uma evidência para cada competência. Escolha a que mais precisa de revisão."
+    },
+    {
+      "title": "Compare sua avaliação com o comentário do Inep",
+      "url": "https://download.inep.gov.br/publicacoes/institucionais/avaliacoes_e_exames_da_educacao_basica/a_redacao_no_enem_2025_cartilha_do_participante.pdf#page=44",
+      "source": "Inep",
+      "kind": "Critérios oficiais",
+      "note": "Leia a redação de Ana Clara na página anterior e anote um acerto e um ponto a melhorar. Confira o comentário da banca e reescreva uma das passagens que ela analisa."
+    }
+  ],
+  "Redação-9": [
+    {
+      "title": "Escreva a proposta oficial do Enem 2024",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D1_CD1.pdf#page=19",
+      "source": "Inep",
+      "kind": "Questão de prova",
+      "note": "Redija até 30 linhas sobre a valorização da herança africana no Brasil. Na revisão, marque a frase que sustenta cada argumento e reescreva o trecho menos convincente."
+    },
+    {
+      "title": "Treine com a proposta comentada do Enem 2026",
+      "url": "https://poliedroresolve.sistemapoliedro.com.br/vestibulares/enem/2026/enem-dia-1-08-11-2026-dia-1-azul/redacao-redacao-dia-1-azul-enem-2026",
+      "source": "Poliedro Resolve",
+      "kind": "Questão de prova",
+      "note": "Leia os textos motivadores sobre o SUS e escreva sua redação antes de ver o comentário. Depois, reescreva um parágrafo para explicitar a relação entre valorização e direito universal."
+    }
+  ]
+}

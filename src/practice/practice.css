@@ -1,0 +1,43 @@
+.practice-bank details {
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.practice-bank details:last-child { border-bottom: 0; }
+.practice-bank summary, .practice-more summary {
+  cursor: pointer;
+  font-weight: 650;
+  line-height: 1.6;
+}
+.practice-bank summary span, .practice-meta { font-size: .875rem; }
+.practice-topic-list, .practice-resources { list-style: none; padding: 0; }
+.practice-topic-list { display: grid; gap: .25rem; margin: .65rem 0; }
+.practice-topic-list button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .65rem;
+  width: 100%;
+  padding: .65rem .85rem;
+  color: var(--text);
+  background: var(--soft);
+  border: 1px solid transparent;
+  border-radius: .5rem;
+  text-align: left;
+}
+.practice-topic-list button:hover, .practice-topic-list button:focus-visible { border-color: #8d80dd; }
+.practice-match { display: block; padding: .4rem .85rem; font-size: .9375rem; }
+.practice-bank a, .practice-dialog a, .practice-actions .text-button { color: #5142ac; }
+.dark .practice-bank a, .dark .practice-dialog a, .dark .practice-actions .text-button { color: #c8bdff; }
+.practice-dialog { border: 1px solid var(--line); width: min(39rem, calc(100% - 1.5rem)); }
+.practice-dialog::backdrop { background: #11182788; }
+.practice-dialog #practice-topic { margin: 0 0 1rem; font-weight: 650; }
+.practice-resources { display: grid; gap: .7rem; margin: .65rem 0; }
+.practice-resources li { display: grid; gap: .35rem; padding: .85rem 1rem; border: 1px solid var(--line); border-radius: .7rem; }
+.practice-resources a { font-weight: 700; text-underline-offset: .14em; }
+.practice-resources svg { display: inline; vertical-align: middle; }
+.practice-resources p { margin: 0; font-size: .9375rem; line-height: 1.5; }
+.practice-more { margin: .8rem 0; }
+.practice-saved h3 { margin: 1rem 0 .5rem; font-size: 1rem; }
+.practice-saved button { margin: 0 .5rem .5rem 0; }
+.practice-actions { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem; margin-top: 1.1rem; }
+.practice-actions button { font-size: .875rem; }
