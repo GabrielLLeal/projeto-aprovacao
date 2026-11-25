@@ -1,3 +1,4 @@
+import type { PriorityTopic } from "../priority/guides";
 import catalog from "./catalog.json";
 
 export type PracticeResource = {
@@ -10,6 +11,6 @@ export type PracticeResource = {
 
 const resourcesByTopic = new Map<string, PracticeResource[]>(Object.entries(catalog));
 
-export function resourcesFor(topicId: string): readonly PracticeResource[] {
-  return resourcesByTopic.get(topicId) ?? [];
+export function resourcesFor(topic: Pick<PriorityTopic, "id" | "curriculumId">): readonly PracticeResource[] {
+  return resourcesByTopic.get(topic.curriculumId ?? topic.id) ?? [];
 }

@@ -1722,5 +1722,117 @@
       "kind": "Questão de prova",
       "note": "Leia os textos motivadores sobre o SUS e escreva sua redação antes de ver o comentário. Depois, reescreva um parágrafo para explicitar a relação entre valorização e direito universal."
     }
+  ],
+  "Filosofia-1": [
+    {
+      "title": "Contrato social e legitimidade do Estado",
+      "url": "https://exercicios.brasilescola.uol.com.br/exercicios-sociologia/exercicios-sobre-contratualismo.htm",
+      "source": "Brasil Escola",
+      "kind": "Fixação",
+      "note": "Compare o que levaria os indivíduos a aceitar um governo nas teorias de Hobbes e Locke."
+    },
+    {
+      "title": "ENEM 2010 · Democracia e cidadania",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2010/primeiro-dia/democracia-regime-politico-no-qual-soberania-e-exercida-pelo-povo-pertence-ao-conjunto-dos-cida/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Relacione a charge à definição de democracia e identifique a prática que limita o despotismo."
+    }
+  ],
+  "Filosofia-2": [
+    {
+      "title": "Dilemas éticos e critérios morais",
+      "url": "https://www.todamateria.com.br/exercicio-sobre-etica-com-respostas-explicadas/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Compare os critérios usados para julgar uma ação e justifique sua escolha antes de conferir a explicação."
+    },
+    {
+      "title": "ENEM 2015 · A lealdade na ética de Kant",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2015-segunda-aplicacao/primeiro-dia/pura-lealdade-na-amizade-embora-ate-o-presente-nao-tenha-existido-nenhum-amigo-leal-e-imposta/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Use o exemplo da amizade para distinguir uma ação por dever de uma ação por interesse."
+    }
+  ],
+  "Filosofia-3": [
+    {
+      "title": "Pré-socráticos e os princípios da natureza",
+      "url": "https://www.todamateria.com.br/exercicio-sobre-os-filosofos-pre-socraticos-com-gabarito/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Compare as explicações dos filósofos sobre a origem da natureza e a mudança."
+    },
+    {
+      "title": "Sócrates, Platão e Aristóteles nos vestibulares",
+      "url": "https://www.mundovestibular.com.br/blog/exercicios-de-filosofia-antiga",
+      "source": "Mundo Vestibular",
+      "kind": "Questão de prova",
+      "note": "Compare as questões sobre diálogo, conhecimento e ação ética e confira a resolução de cada prova."
+    }
+  ],
+  "Filosofia-4": [
+    {
+      "title": "Empirismo e racionalismo",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-o-empirismo-com-gabarito-explicado/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Use os textos de Locke e Hume para contrastar experiência e razão como fontes de conhecimento."
+    },
+    {
+      "title": "Como o conhecimento científico muda",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-a-filosofia-da-ciencia-com-gabarito/",
+      "source": "Toda Matéria",
+      "kind": "Aplicação",
+      "note": "Aplique os conceitos de paradigma e refutação aos exemplos sobre Kuhn e Popper."
+    }
+  ],
+  "Filosofia-5": [
+    {
+      "title": "Agostinho, Tomás de Aquino e a tradição medieval",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-filosofia-medieval-com-gabarito-explicado/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Compare o papel da vontade em Agostinho com o da virtude em Tomás de Aquino."
+    },
+    {
+      "title": "ENEM 2018 · Razão e fé em Tomás de Aquino",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2018/primeiro-dia/o-texto-apresenta-uma-elaboracao-teorica-de-tomas-de-aquino-caracterizada-por/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Leia o argumento da Suma teológica e explique a função do raciocínio na defesa de uma crença."
+    }
+  ],
+  "Filosofia-6": [
+    {
+      "title": "Indústria cultural e cultura de massa",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-industria-cultural-e-cultura-de-massa/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Identifique os efeitos da produção comercial sobre a obra de arte e a experiência do público."
+    },
+    {
+      "title": "ENEM 2016 · Liberdade de escolha e indústria cultural",
+      "url": "https://descomplica.com.br/gabarito-enem/questoes/2016/primeiro-dia/hoje-a-industria-cultural-assumiu-a-heranca-civilizatoria-da-democracia-de-pioneiros-e-empresarios/",
+      "source": "Descomplica",
+      "kind": "Questão de prova",
+      "note": "Interprete como Adorno e Horkheimer relacionam as opções oferecidas pela indústria à autonomia do indivíduo."
+    }
+  ],
+  "Filosofia-7": [
+    {
+      "title": "O conhecimento sensível e o juízo estético",
+      "url": "https://www.todamateria.com.br/exercicios-sobre-estetica-na-filosofia-com-gabarito/",
+      "source": "Toda Matéria",
+      "kind": "Fixação",
+      "note": "Identifique nos trechos filosóficos o objeto da estética e os argumentos sobre a experiência artística."
+    },
+    {
+      "title": "Platão e Kant sobre a experiência da arte",
+      "url": "https://cejarj.cecierj.edu.br/ava_arquivos/material_didatico_site/exercicios/filosofia/ceja_filosofia_unidade_5_exercicios.pdf",
+      "source": "Fundação Cecierj",
+      "kind": "Aplicação",
+      "note": "Responda por escrito às questões de 1 a 3 e compare seus argumentos com os do gabarito."
+    }
   ]
 }

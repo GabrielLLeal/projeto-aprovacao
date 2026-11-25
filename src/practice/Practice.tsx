@@ -1,8 +1,10 @@
 import { BookOpen, ChevronRight, ExternalLink, PenLine, X } from "lucide-react";
 import { resourcesFor, type PracticeResource } from "./resources";
+import type { PriorityTopic } from "../priority/guides";
+import { PriorityBadge } from "../priority/Priority";
 import "./practice.css";
 
-export type PracticeTopic = { id: string; subject: string; title: string };
+export type PracticeTopic = PriorityTopic & { subject: string; title: string };
 
 type BankProps = {
   topics: PracticeTopic[];
@@ -27,7 +29,7 @@ export function PracticeBank({ topics, subject, title, query, onOpen }: BankProp
   for (const topic of topics) {
     if (subject !== "Todas" && topic.subject !== subject) continue;
     if (title !== "Todos" && topic.title !== title) continue;
-    const resources = resourcesFor(topic.id);
+    const resources = resourcesFor(topic);
     if (!resources.length) continue;
     if (search && !searchable(topic.subject + " " + topic.title).includes(search)
       && !resources.some(item => matchesResource(item, search))) continue;
@@ -45,10 +47,10 @@ export function PracticeBank({ topics, subject, title, query, onOpen }: BankProp
           <ul className="practice-topic-list">
             {items.map(topic => (
               <li key={topic.id}>
-                <button type="button" onClick={() => onOpen(topic)}>
-                  {topic.title}<ChevronRight size={16} aria-hidden="true"/>
+                <button type="button" aria-label={topic.title} aria-describedby={"bank-priority-" + topic.id} onClick={() => onOpen(topic)}>
+                  {topic.title}<PriorityBadge topic={topic} id={"bank-priority-" + topic.id}/><ChevronRight size={16} aria-hidden="true"/>
                 </button>
-                {search && resourcesFor(topic.id).filter(item => matchesResource(item, search)).map(item => (
+                {search && resourcesFor(topic).filter(item => matchesResource(item, search)).map(item => (
                   <a className="practice-match" key={item.url} href={item.url} target="_blank" rel="noopener noreferrer">
                     {item.title} · {item.source}
                   </a>
@@ -94,7 +96,7 @@ type DialogProps = {
 };
 
 export function PracticeDialog({ topic, saved, onDismiss, onExercise, onRegister, onWrite }: DialogProps) {
-  const resources = resourcesFor(topic.id);
+  const resources = resourcesFor(topic);
   const visibleCount = 3;
   const remaining = resources.length - visibleCount;
 
@@ -106,6 +108,7 @@ export function PracticeDialog({ topic, saved, onDismiss, onExercise, onRegister
         <button type="button" className="icon-button" aria-label="Fechar exercícios" onClick={onDismiss}><X/></button>
       </div>
       <p id="practice-topic">{topic.subject} · {topic.title}</p>
+      <PriorityBadge topic={topic}/>
       <ResourceList resources={resources.slice(0, visibleCount)}/>
       {remaining > 0 && (
         <details className="practice-more">
