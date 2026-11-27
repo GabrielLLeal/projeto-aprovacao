@@ -89,13 +89,15 @@ function ResourceList({ resources }: { resources: readonly PracticeResource[] })
 type DialogProps = {
   topic: PracticeTopic;
   saved: { id: string; title: string }[];
+  completed: boolean;
+  onFinish?: () => void;
   onDismiss: () => void;
   onExercise: (id: string) => void;
   onRegister: () => void;
   onWrite: () => void;
 };
 
-export function PracticeDialog({ topic, saved, onDismiss, onExercise, onRegister, onWrite }: DialogProps) {
+export function PracticeDialog({ topic, saved, completed, onFinish, onDismiss, onExercise, onRegister, onWrite }: DialogProps) {
   const resources = resourcesFor(topic);
   const visibleCount = 3;
   const remaining = resources.length - visibleCount;
@@ -126,12 +128,16 @@ export function PracticeDialog({ topic, saved, onDismiss, onExercise, onRegister
           ))}
         </section>
       )}
+      <p className="muted">{completed ? "Tema já concluído no cronograma. Você pode usar estes exercícios para revisar."
+        : onFinish ? "Depois de resolver os exercícios no site indicado, volte aqui para concluir o tema."
+        : "Prática avulsa. A conclusão do tema será liberada após os pré-requisitos."}</p>
       <div className="practice-actions">
+        {!completed && onFinish && <button type="button" className="primary-button" onClick={onFinish}>Concluir tema</button>}
         {topic.subject === "Redação" && (
           <button type="button" className="primary-button" onClick={onWrite}><PenLine size={16}/> Abrir caderno de redação</button>
         )}
         <button type="button" className="secondary-button" onClick={onRegister}><BookOpen size={16}/> Registrar uma questão</button>
-        <button type="button" className="text-button" onClick={onDismiss}>Continuar depois</button>
+        <button type="button" className="text-button" onClick={onDismiss}>{completed ? "Fechar" : "Continuar depois"}</button>
       </div>
     </dialog>
   );
